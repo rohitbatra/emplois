@@ -1,0 +1,1735 @@
+/*
+Theme Name: Jobseek
+Description: Job Board WordPress Theme
+Author: coffeecream 
+Theme URL: http://themeforest.net/user/coffeecream/portfolio
+Author URL: http://themeforest.net/user/coffeecream
+Version: 1.0
+License: ThemeForest Regular License
+License URI: http://themeforest.net/licenses/regular
+
+------------------------------------------------------------------
+
+[Table of contents]
+
+1. Common Styles
+2. Job & Resume Forms
+3. Job & Resume Filters
+4. Job & Resume List
+   4.1. Columns
+   4.2. Icons
+   4.3. Badges
+   4.4. Featured Jobs
+   4.5. Pagination
+5. Single Resume Page
+6. Applying
+   6.1. Applying Buttons
+   6.2. Applying Form
+   6.3. Apply With Facebook
+7. Job Bookmark
+8. Companies
+   8.1. Company Profile
+   8.2. Companies Directory
+9. Dashboards
+	9.1. Icons
+	9.2. Filters
+	9.3. Ratings
+10. WooCommerce
+	10.1. Cart
+11. Visual Composer
+12. Sidebar
+13. Indeed Jobs
+14. Mobile Styles
+	14.1. Big screens
+    14.2. Regular Tablets
+    14.3. Small Tablets
+
+-------------------------------------------------------------------*/
+
+/* 1. COMMON STYLES
+===================================================================*/
+
+.entry-content .job_listing_packages_title,
+.entry-content .resume_packages_title,
+.job_listing_packages_title,
+.resume_packages_title {
+	padding: 2em 1em;
+}
+
+#job_preview h2,
+.woocommerce h2,
+.resume_preview_title h2 {
+	margin-top: 2em;
+}
+
+#job_package_selection,
+#resume_package_selection,
+#order_review,
+.cjfm-form.cjfm-login-form {
+	margin-bottom: 80px;
+}
+
+.cjfm-modalbox-login-content .cjfm-form.cjfm-login-form {
+	margin-bottom: 0;
+}
+
+input[type=file] {
+	background: none;
+	border: 0;
+	padding: 10px 0;
+}
+
+input[type=submit] {
+	background: #14b1bb;
+	border: 0;
+	border-radius: 3px;
+    box-shadow: none;
+    color: #fff;
+	font-family: "Montserrat", Arial;
+	font-size: 14px;
+	padding: 6px 20px;
+	text-shadow: none;
+	text-transform: uppercase;
+	white-space: normal;
+	position: relative;
+	z-index: 10;
+}
+
+#prefooter input[type=submit] {
+	height: 35px;
+	border-radius: 0 3px 3px 0;
+}
+
+/* 2. JOB & RESUME FORMS
+===================================================================*/
+
+#submit-job-form,
+#submit-resume-form {
+	padding-bottom: 60px;
+}
+
+.job-manager-form h2 {
+	margin-top: 60px;
+}
+
+.job-manager-form fieldset {
+	border-bottom: 1px solid #e7e7e7;
+	display: table;
+	padding: 15px 0;
+	width: 100%;
+}
+
+	.job-manager-form fieldset fieldset {
+		border: 0;
+		padding: 5px 0;
+	}
+
+.job-manager-form label {
+	float: left;
+	margin-top: 10px;
+	width: 30%;
+}
+
+	.job-manager-form fieldset label small {
+		font-size: inherit;
+		opacity: 1;
+	}
+
+.job-manager-form input[type=text],
+.job-manager-form input[type=email],
+.job-manager-form select,
+.job-manager-form textarea {
+	width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin: 4px 4px 0 0;
+	position: relative;
+	top: 3px;
+}
+
+.job-manager-form .field {
+	float: right;
+	width: 70%;
+}
+
+.wp-editor-container {
+	background: #f8f8f8;
+	border: 1px solid #e7e7e7;
+	border-radius: 3px;
+}
+
+.job-manager-form .button {
+	background: #14b1bb;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	font-family: "Montserrat", Arial;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 30px;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.job-manager-form p:last-child {
+	text-align: center;
+}
+
+#submit-resume-form fieldset:first-child,
+#submit-job-form fieldset:first-child {
+	background: #f8f8f8;
+	border-top: 1px solid #e7e7e7;
+	margin-bottom: 60px;
+	padding: 80px 100px;
+}
+
+	#submit-resume-form fieldset:first-child label,
+	#submit-resume-form fieldset:first-child .field,
+	#submit-job-form fieldset:first-child label,
+	#submit-job-form fieldset:first-child .field {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	#submit-resume-form fieldset:first-child label,
+	#submit-job-form fieldset:first-child label {
+		font-family: "Montserrat", Arial;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	#submit-resume-form fieldset:first-child .button,
+	#submit-job-form fieldset:first-child .button {
+		display: block;
+		left: 50%;
+		margin: 30px 0 30px -100px;
+		position: relative;
+		width: 200px !important;
+	}
+
+.fieldset-candidate_photo img {
+	max-width: 100%;
+}
+
+.job-manager-applications-applied-notice {
+	background-color: #fcf8e3;
+	border: 1px solid #faebcc;
+	border-radius: 3px;
+	color: #8a6d3b;
+	padding: 15px;
+	margin-top: 10px;
+}
+
+.job-manager-message {
+	background-color: #dff0d8;
+	border: 1px solid #d6e9c6;
+	border-radius: 3px;
+	color: #3c763d;
+	padding: 15px;
+}
+
+/* 3. JOB & RESUME FILTERS
+===================================================================*/
+
+.job_filters,
+.resume_filters {
+	background: #f8f8f8;
+	border: 1px solid #e7e7e7;
+	border-radius: 3px;
+	margin-bottom: 60px;
+	padding: 15px;
+}
+
+	.search_jobs,
+	.search_resumes {
+		display: table;
+		width: 100%;
+	}
+
+	.search_keywords,
+	.search_location,
+	.search_categories,
+	.search_region,
+	#content .gjm-filter-wrapper,
+	#content .grm-filter-wrapper {
+		float: left;
+		padding: 15px;
+		width: 33.33333%;
+	}
+	.search_region {
+		padding-top: 43px;
+	}
+
+	#content .gjm-filter-wrapper,
+	#content .grm-filter-wrapper {
+		margin-top: 0;
+		padding-top: 0;
+		clear: none;
+	}
+
+	#content .gjm-filter-wrapper.radius,
+	#content .grm-filter-wrapper.radius {
+		clear: left;
+	}
+
+	.search_keywords label,
+	.search_location label,
+	.search_categories label {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+
+	.search_keywords input,
+	.search_location input,
+	.search_region input,
+	.search_categories input,
+	.search_categories select,
+	.search_categories .input-text,
+	.search_categories .postform,
+	.search_categories .chosen-container-multi .chosen-choices,
+	.search_categories .chosen-container-single .chosen-single,
+	.search_region .chosen-container-multi .chosen-choices,
+	.search_region .chosen-container-single .chosen-single,
+	.gjm-filter-wrapper select,
+	.grm-filter-wrapper select,
+	.job-application-edit select,
+	.job-application-edit input[name=application_rating] {
+		background: #fff;
+		border: 1px solid #e7e7e7;
+		border-radius: 0;
+		box-shadow: none;
+		height: 45px;
+		padding: 10px 15px;
+		width: 100%;
+	}
+
+	.search_region .chosen-container {
+		width: 100% !important;
+	}
+
+	.job-application-edit input[name=application_rating] {
+		width: auto;
+	}
+
+		.chosen-container-single .chosen-single div {
+			top: 10px;
+			width: 15px;
+		}
+
+		.chosen-container .chosen-drop {
+			border: 1px solid #e7e7e7;
+			border-top: 0;
+			box-shadow: none;
+		}
+
+	.gjm-filter-wrapper select,
+	.grm-filter-wrapper select {
+		height: 43px;
+	}
+
+	.search_categories .chosen-container {
+		display: block;
+		width: 100% !important;
+	}
+
+	.search_categories .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+		margin: 0;
+		padding: 0;
+	}
+
+	.job_types {
+		border-top: 1px solid #e7e7e7;
+		list-style: none;
+		margin: 0 15px;
+		padding: 15px 0;
+	}
+
+		.job_types li {
+			float: left;
+			margin-right: 30px;
+		}
+
+	.showing_jobs,
+	.showing_resumes {
+		border-top: 1px solid #e7e7e7;
+		clear: both;
+		padding-top: 15px;
+		margin: 22px 15px 15px;
+	}
+
+		.showing_jobs .rss_link,
+		.showing_jobs .reset,
+		.showing_resumes .reset {
+			border-radius: 3px;
+			color: #fff;
+			display: block;
+			float: right;
+			font-weight: bold;
+			padding: 0 10px;
+			text-transform: uppercase;
+		}
+
+		.showing_jobs .rss_link {
+			background: #ff6600;
+		}
+
+			.showing_jobs .rss_link:hover {
+				background: #ff4400 !important;
+			}
+
+		.showing_jobs .reset,
+		.showing_resumes .reset {
+			background: #14b1bb;
+			margin-left: 5px;
+		}
+
+			.showing_jobs .reset:hover,
+			.showing_resumes .reset:hover {
+				background: #0d7076 !important;
+			}
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+	padding: 0;
+}
+
+.job_filters .search_jobs i.gjm-locator-btn,
+.resume_filters .search_resumes i.grm-locator-btn {
+	top: 12px;
+	right: 15px;
+	color: #14B1BB;
+}
+.resume_filters .search_resumes i.grm-locator-btn {
+	right: 10px;
+}
+.job_filters .search_jobs i.gjm-locator-loader,
+.resume_filters .search_resumes i.grm-locator-loader {
+	top: 14px;
+	right: 14px;
+}
+
+.job_filters .search_jobs .filter_by_tag a {
+	background: #bbb;
+	border-radius: 9px;
+	color: #fff;
+	display: inline-block;
+	height: 18px;
+	line-height: 18px;
+	font-size: 12px !important;
+	font-weight: bold;
+	margin-left: 2px;
+	padding: 0 8px;
+	white-space: nowrap;
+}
+
+	.job_filters .search_jobs .filter_by_tag a:hover {
+		background: #999;
+	}
+
+/* 4. JOBS AND RESUMES LIST
+===================================================================*/
+
+ul.job_listings,
+ul.job_listings ul,
+ul.resumes,
+ul.resumes ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li.no_job_listings_found,
+li.no_resumes_found {
+	background: #fff4e2;
+	border: #ffeccc 1px solid;
+	border-radius: 3px;
+	margin: -1px 0 0 -1px;
+	padding: 10px 15px 11px;
+	color: #9d8967;
+}
+
+ul.job_listings,
+ul.resumes {
+	border: 1px solid #e7e7e7;
+	border-bottom: 0;
+	border-radius: 3px;
+}
+
+	ul.job_listings a,
+	ul.resumes a {
+		border-bottom: 1px solid #e7e7e7;
+		color: #888;
+		display: block;
+		padding: 15px 0;
+		position: relative;
+	}
+
+		ul.job_listings a:hover,
+		ul.job_listings .job_position_featured:hover > a,
+		ul.resumes a:hover {
+			background: #f2f2f2;
+		}
+
+		ul.job_listings a .row,
+		ul.resumes a .row {
+			margin: 0;
+		}
+
+	#content ul.job_listings h5,
+	#content ul.resumes h5,
+	#content ul.resumes p {
+		margin: 0;
+		line-height: 1.71em;
+	}
+
+	ul.job_listings strong,
+	ul.job_listings .col.job-location,
+	ul.resumes .col.candidate-location,
+	ul.job_listings .salary,
+	ul.resumes strong,
+	ul.resumes .col.candidate-location {
+		color: #222;
+		font-weight: normal;
+	}
+
+	ul.job_listings .hidden-job,
+	ul.job_listings .job-manager-applications-applied-notice {
+		display: none;
+	}
+
+	ul.job_listings img,
+	ul.resumes img {
+		max-width: 100%;
+	}
+
+	ul.resumes img {
+		border-radius: 50%;
+	}
+
+	ul.job_listings .application-deadline label {
+		text-transform: none;
+		color: inherit;
+	}
+
+	ul.job_listings .col.job-location,
+	ul.job_listings .col.job-dates,
+	ul.resumes .col.candidate-location {
+		position: relative;
+	}
+
+		ul.job_listings .gjm-distance-wrapper,
+		ul.resumes .grm-distance-wrapper {
+			display: block;
+			color: #888;
+			border: none;
+			float: none;
+			padding: 0;
+			margin: 0;
+			font-size: inherit;
+		}
+
+	/* 4.1. COLUMNS
+	---------------------------------------------------------------*/
+
+	ul.job_listings .col,
+	ul.resumes .col {
+		float: left;
+		padding: 0 15px;
+	}
+
+	ul.job_listings .col.job-logo {
+		width: 10%;
+		text-align: center;
+		line-height: 44px;
+	}
+
+	ul.job_listings .col.job-title {
+		width: 32%;
+	}
+
+	ul.job_listings .col.job-location {
+		padding-left: 30px;
+		width: 23%;
+	}
+
+	ul.job_listings .col.job-type {
+		text-align: center;
+		width: 14%;
+	}
+
+	ul.job_listings .col.job-dates {
+		padding-left: 37px;
+		width: 21%;
+	}
+
+		.home ul.job_listings .col.job-logo {
+			width: 14%;
+		}
+
+		.home ul.job_listings .col.job-title {
+			width: 41%;
+		}
+
+		.home ul.job_listings .col.job-location {
+			width: 26%;
+		}
+
+		.home ul.job_listings .col.job-type {
+			text-align: center;
+			width: 19%;
+		}
+
+		.home ul.job_listings .col.job-dates {
+			display: none;
+		}
+
+	ul.resumes .col.candidate-photo {
+		width: 10%;
+		text-align: center;
+	}
+
+	ul.resumes .col.candidate-name {
+		width: 35%;
+	}
+
+	ul.resumes .col.candidate-location {
+		padding-left: 30px;
+		width: 30%;
+	}
+
+	ul.resumes .col.candidate-posted {
+		text-align: left;
+		width: 25%;
+	}
+
+	/* 4.2. ICONS
+	---------------------------------------------------------------*/
+
+	ul.job_listings .col.job-location:before,
+	ul.resumes .col.candidate-location:before {
+		color: #14b1bb;
+		content: "\f041";
+		font-family: "FontAwesome";
+		left: 15px;
+		position: absolute;
+		top: 0;
+	}
+
+	ul.job_listings .col.job-dates:before {
+		color: #14b1bb;
+		content: "\f073";
+		font-family: "FontAwesome";
+		left: 15px;
+		position: absolute;
+		top: 0;
+	}
+
+	ul.job_listings .applied .job-title h5:before {
+		color: #6ecf26;
+		content: "\f058";
+		font-family: "FontAwesome";
+		font-weight: normal;
+		margin-right: 7px;
+	}
+
+	ul.resumes .candidate-date:before {
+		color: #14b1bb;
+		content: "\f073";
+		font-family: "FontAwesome";
+		font-weight: normal;
+		margin-right: 7px;
+	}
+
+	/* 4.3. BADGES
+	---------------------------------------------------------------*/
+
+	.badge.full-time {
+		background: #6ecf26;
+	}
+
+	.badge.part-time {
+		background: #ff6c00;
+	}
+
+	.badge.freelance {
+		background: #72d2ff;
+	}
+
+	.badge.temporary {
+		background: #c20000;
+	}
+
+	.badge.internship {
+		background: #0064c2;
+	}
+
+	/* 4.4. FEATURED JOB
+	---------------------------------------------------------------*/
+
+	ul.job_listings .job_position_featured > a {
+		background: #f8f8f8;
+		border-bottom: 1px solid #14b1bb;
+	}
+
+		ul.job_listings .job_position_featured > a:after {
+			background: #14B1BB;
+			border-radius: 50%;
+			color: #fff;
+			content: "\f005";
+			display: block;
+			font-family: "FontAwesome";
+			font-size: 12px;
+			height: 20px;
+			left: -10px;
+			line-height: 20px;
+			position: absolute;
+			text-align: center;
+			top: 15px;
+			width: 20px;
+		}
+
+	.featured-job {
+		color: #888;
+	}
+
+		.featured-job img,
+		.featured-job .title {
+			float: left;
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+
+		.featured-job img {
+			margin-left: 15px;
+		}
+
+		.featured-job .data {
+			border-bottom: 1px solid #e7e7e7;
+			border-top: 1px solid #e7e7e7;
+			clear: both;
+			margin: 15px 0;
+			padding: 10px 15px;
+		}
+
+		.featured-job .description {
+			padding: 0 15px;
+		}
+
+		.featured-job .description > *:last-child {
+			margin-bottom: 0;
+		}
+
+		.featured-job .company_logo {
+			float: left;
+			margin: 30px 15px;
+			width: 60px;
+		}
+
+		.featured-job .title {
+			float: left;
+			padding-left: 20px;
+		}
+
+			.featured-job .title h5,
+			.featured-job .title p {
+				margin: 0 !important;
+			}
+
+		.featured-job i {
+			margin-right: 10px;
+		}
+
+		.featured-job .city i,
+		.featured-job .salary i {
+			color: #14b1bb;
+		}
+
+		.featured-job .full-time i {
+			color: #6ecf26;
+		}
+
+		.featured-job .part-time i {
+			color: #ff6c00;
+		}
+
+		.featured-job .freelance i {
+			color: #72d2ff;
+		}
+
+	/* 4.5. PAGINATION
+	---------------------------------------------------------------*/
+
+	.job-manager-pagination ul {
+		list-style: none;
+		margin: 2em 0 0;
+		padding: 0;
+		text-align: center;
+	}
+
+		.job-manager-pagination ul li {
+			display: inline-block;
+			margin: 0 2px;
+		}
+
+			.job-manager-pagination ul li a {
+				border: 1px solid #ddd;
+				border-radius: 3px;
+				display: block;
+				padding: 5px 12px;
+			}
+
+				.job-manager-pagination ul li a:hover {
+					background: #f2f2f2;
+				}
+
+			.job-manager-pagination ul li .current {
+				background: #14B1BB;
+				border-radius: 3px;
+				color: #fff;
+				display: block;
+				padding: 6px 13px;
+			}
+
+/* 5. SINGLE RESUME PAGE
+===================================================================*/
+
+.resume_preview_title {
+	padding: 0 15px;
+}
+
+.resume_preview h1 {
+	margin-bottom: 2em;
+	padding: 0 15px;
+}
+
+.work-experience .img-circle {
+	background: #14b1bb;
+	color: #fff;
+	font-size: 30px;
+	height: 74px;
+	line-height: 74px;
+	margin: 5px 0 30px;
+	text-align: center;
+	width: 100%;
+}
+
+#content .work-experience h5 {
+	margin: 0;
+	line-height: 2em;
+}
+
+.candidate_photo {
+	margin-bottom: 30px;
+}
+
+.resume_contact_details {
+	padding: 30px 0;
+}
+
+.skills .badge {
+	margin-right: 5px;
+	text-transform: capitalize;
+}
+
+.sidebar-widget .company_logo,
+.job_listing-widget .company_logo {
+	border-radius: 3px;
+	max-width: 100%;
+}
+
+/* 6. APPLYING
+===================================================================*/
+
+	/* 6.1. APPLYING BUTTONS
+	---------------------------------------------------------------*/
+
+	.job_application {
+		border-bottom: 1px solid #e7e7e7;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+	}
+
+		.job_application .button {
+			width: 100% !important;
+		}
+
+		.job_application div.gjm-map-wrapper {
+			margin-top: 40px;
+			display: block;
+		}
+
+		.job_application h2 {
+			margin-bottom: 40px;
+		}
+
+	.apply-with-facebook,
+	.apply-with-linkedin,
+	.apply-with-xing {
+		background: #fff;
+		border: 2px solid #14b1bb;
+		border-radius: 3px;
+		color: #14b1bb;
+		display: block;
+		font-family: "Montserrat", Arial;
+		font-size: 14px;
+		font-weight: bold;
+		margin: 0 0 5px;
+		padding: 4px 18px;
+		text-transform: uppercase;
+		width: 100%;
+	}
+
+	.apply-with-facebook:hover,
+	.apply-with-linkedin:hover,
+	.apply-with-xing:hover {
+		background: #14b1bb;
+		color: #fff;
+	}
+
+	.job_description strong {
+		color: #222;
+	}
+
+	/* 6.2. APPLYING FORM
+	---------------------------------------------------------------*/
+
+	.application_details {
+		background: rgba(0,0,0,0.75);
+		height: 100%;
+		left: 0;
+		overflow: auto;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 500000;
+		display: none;
+	}
+
+	.form-wrapper {
+		background: #fff;
+		border-radius: 4px;
+		display: block;
+		left: 50%;
+		margin: 50px 0 50px -250px;
+		padding: 30px;
+		position: absolute;
+		width: 500px;
+		top: 0;
+	}
+
+		.form-wrapper h2 {
+			margin: 0 0 20px;
+		}
+
+		.form-wrapper .close {
+			font-size: 2em;
+			position: relative;
+			z-index: 1000;
+		}
+
+		.form-wrapper fieldset {
+			border: 0;
+			padding: 10px 0;
+		}
+
+		.form-wrapper label,
+		.form-wrapper .field {
+			display: block;
+			float: none;
+			width: 100%;
+		}
+
+		.form-wrapper select,
+		.form-wrapper textarea {
+			background: #f8f8f8;
+			border-radius: 0;
+			border: #e7e7e7 1px solid;
+			width: 100%;
+		}
+
+		.form-wrapper select {
+			padding: 10px 0 10px 15px;
+		}
+
+		.form-wrapper textarea {
+			height: 100px;
+			padding: 10px;
+		}
+
+		.form-wrapper hr {
+			display: none;
+		}
+
+		.form-wrapper p:last-child {
+			text-align: left;
+		}
+
+	.no-scroll {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	/* 6.3. APPLY WITH FACEBOOK
+	---------------------------------------------------------------*/
+	
+	.apply-with-facebook-profile { margin-top: 40px; padding-top: 40px; border-top: 1px solid #e7e7e7; }
+
+/* 7. JOB BOOKMARK
+===================================================================*/
+
+.wp-job-manager-bookmarks-form label {
+	text-align: left;
+}
+
+.wp-job-manager-bookmarks-form .bookmark-details {
+	background: #f8f8f8;
+	border: 1px solid #e7e7e7;
+	display: none;
+	margin-top: 30px;
+	padding: 30px;
+}
+
+.wp-job-manager-bookmarks-form textarea {
+	border: 1px solid #e7e7e7;
+	border-radius: 3px;
+	padding: 15px;
+}
+
+.bookmark-notice::after {
+	content: "\f063";
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+	.bookmark-notice.open::after {
+		content: "\f062";
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		padding-left: 10px;
+	}
+
+/* 8. COMPANIES
+===================================================================*/
+
+	/* 8.1. COMPANY PROFILE
+	---------------------------------------------------------------*/
+
+	.company-profile i {
+		margin-right: 10px;
+	}
+
+	.job_listing-widget {
+		border-bottom: 1px solid #e7e7e7;
+		margin: 0 0 30px 15px;
+		padding-bottom: 30px;
+	}
+
+	.company-social {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+		.company-social li a {
+			display: block;
+			padding: 0.2em 0;
+		}
+
+			.company-social li a i {
+				color: #222;
+				width: 25px;
+			}
+
+	/* 8.2. COMPANIES DIRECTORY
+	---------------------------------------------------------------*/
+
+	.company-letters {
+		background: #f8f8f8;
+		border-bottom: 1px solid #e7e7e7;
+			margin-bottom: 30px;
+		text-align: center;
+	}
+
+		.company-letters a {
+			display: inline-block;
+			font-weight: bold;
+			padding: 10px;
+		}
+
+	.companies-overview,
+	.company-group ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.companies-overview {
+		margin-bottom: 80px;
+	}
+
+	.company-group {
+		padding: 15px;
+		width: 25%;
+	}
+
+		.company-group a {
+			border-bottom: 1px solid #e7e7e7;
+			display: block;
+			padding: 1em;
+		}
+
+			.company-group a:hover {
+				background: #f8f8f8;
+			}
+
+	.company-letter {
+		border-bottom: 3px solid #e7e7e7;
+		color: #222;
+		font-family: "Montserrat", Arial, sans-serif;
+		font-size: 3em;
+		font-weight: 900;
+	}
+
+/* 9. DASHBOARDS
+===================================================================*/
+
+.job-dashboard-actions,
+.candidate-dashboard-actions {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+	.job-dashboard-actions li,
+	.candidate-dashboard-actions li {
+		display: inline-block;
+		margin-right: 15px;
+	}
+
+		.job-dashboard-actions li a,
+		.candidate-dashboard-actions li a {
+			color: #888;
+			font-size: 0.8em;
+			text-transform: uppercase;
+		}
+
+	/* 9.1. ICONS
+	---------------------------------------------------------------*/
+
+	.job-dashboard-actions li a::before,
+	.candidate-dashboard-actions li a::before {
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		padding-right: 5px;
+	}
+
+	.job-dashboard-actions li .job-dashboard-action-edit::before,
+	.candidate-dashboard-actions li .candidate-dashboard-action-edit::before {
+		color: #72d2ff;
+		content: "\f040";
+	}
+
+	.candidate-dashboard-actions li .candidate-dashboard-action-hide::before {
+		color: #6ecf26;
+		content: "\f070";
+	}
+
+	.candidate-dashboard-actions li .candidate-dashboard-action-publish::before {
+		color: #6ecf26;
+		content: "\f06e";
+	}
+
+	.job-dashboard-actions li .job-dashboard-action-mark_filled::before {
+		color: #6ecf26;
+		content: "\f00c";
+	}
+
+	.job-dashboard-actions li .job-dashboard-action-delete::before,
+	.candidate-dashboard-actions li .candidate-dashboard-action-delete::before {
+		color: #ff6c00;
+		content: "\f00d";
+	}
+
+	div.job-applications ul.job-applications li.job-application header .job-application-rating:before,
+	div.job-applications ul.job-applications li.job-application header .job-application-rating span:before,
+	div.job-applications ul.job-applications li.job-application footer ul.actions li a:before,
+	div.job-applications ul.job-applications li.job-application section.job-application-content .hide_section:before,
+	div.job-applications ul.job-applications li.job-application section.job-application-edit .hide_section:before,
+	div.job-applications ul.job-applications li.job-application section.job-application-notes .hide_section:before,
+	.job-applications-download-csv:before {
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+	}
+
+	div.job-applications ul.job-applications li.job-application header .job-application-rating:before {
+		line-height: 16px;
+		content: "\f006\f006\f006\f006\f006";
+		top: 0;
+		left: 0;
+		position: absolute;
+		letter-spacing: .075em;
+	}
+
+	div.job-applications ul.job-applications li.job-application header .job-application-rating span:before {
+		line-height: 16px;
+		color: #ffd200;
+		content: "\f005\f005\f005\f005\f005";
+		top: 0;
+		left: 0;
+		position: absolute;
+		letter-spacing: .075em;
+	}
+
+	div.job-applications ul.job-applications li.job-application section.job-application-content .hide_section:before,
+	div.job-applications ul.job-applications li.job-application section.job-application-edit .hide_section:before,
+	div.job-applications ul.job-applications li.job-application section.job-application-notes .hide_section:before {
+		content: "\f00d";
+	}
+
+	div.job-applications ul.job-applications li.job-application footer ul.actions li.content a:before {
+		content: "\f0c9";
+	}
+
+	div.job-applications ul.job-applications li.job-application footer ul.actions li.resume a:before {
+		content: "\f007";
+	}
+
+	div.job-applications ul.job-applications li.job-application footer ul.actions li.email a:before {
+		content: "\f0e0";
+	}
+
+	div.job-applications ul.job-applications li.job-application footer ul.actions li.notes a:before {
+		content: "\f0e5";
+	}
+
+	div.job-applications ul.job-applications li.job-application footer ul.actions li.edit a:before {
+		content: "\f040";
+	}
+
+	div.job-applications ul.job-applications li.job-application footer ul.actions li.attachment a:before {
+		content: "\f0c6";
+	}
+
+	div.job-applications ul.job-applications li.job-application footer ul.actions {
+		margin: 0;
+	}
+
+	div.job-applications ul.job-applications li.job-application footer ul.actions li a {
+		padding: 3em 2em 0 1em;
+	}
+
+	.job-applications-download-csv:before {
+		content: "\f019";
+		margin-right: 10px;
+	}
+
+	/* 9.2. FILTERS
+	---------------------------------------------------------------*/
+
+	.filter-job-applications select {
+		padding: 10px 15px;
+		height: 45px;
+		border-radius: 0;
+		border: 1px solid #e7e7e7;
+		background: #fff;
+	}
+
+	/* 9.3. CANDIDATE RATING
+	---------------------------------------------------------------*/
+
+	input[name=wp_job_manager_edit_application] {
+		margin-top: 15px;
+	}
+
+/* 10. WOOCOMMERCE
+===================================================================*/
+
+.return-to-shop {
+	display: none;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	background: #14B1BB;
+}
+
+	.woocommerce #respond input#submit.alt:hover,
+	.woocommerce a.button.alt:hover,
+	.woocommerce button.button.alt:hover,
+	.woocommerce input.button.alt:hover {
+		background: #0d7076;
+	}
+
+.order_details {
+	padding: 0;
+}
+
+	/* 10.1. CART
+	---------------------------------------------------------------*/
+
+	.select2-container .select2-choice {
+		background: #f8f8f8;
+		border: 1px solid #e7e7e7;
+		border-radius: 0;
+		color: #888;
+		padding: 7px 0 7px 15px;
+	}
+
+		.select2-drop {
+			background: #f8f8f8;
+		}
+
+		.select2-drop-active {
+			border: 1px solid #e7e7e7;
+			border-top: 0;
+		}
+
+	.woocommerce table.shop_table {
+		border: 0;
+		border-collapse: collapse;
+		border-radius: 0;
+		margin: 0 0 30px;
+	}
+
+		.woocommerce table.shop_table th,
+		.woocommerce table.shop_table td {
+			border: 0;
+			border-bottom: 1px solid #e7e7e7;
+		}
+
+		.woocommerce table.shop_table thead th {
+			border-bottom: 3px solid #e7e7e7;
+		}
+
+	.woocommerce-checkout #payment {
+		background: #f8f8f8;
+		border: 1px solid #e7e7e7;
+		border-radius: 3px;
+		width: 100%;
+	}
+
+		.woocommerce-checkout #payment ul.payment_methods {
+			border-bottom: 1px solid #e7e7e7;
+		}
+
+		.woocommerce-checkout #payment div.payment_box {
+			border-radius: 3px;
+			background: #ddd;
+			color: #222;
+			padding: 1em;
+			width: 100%;
+		}
+
+			.woocommerce-checkout #payment div.payment_box:after {
+				border-bottom: 8px solid #ddd;
+			}
+
+/* 11. VISUAL COMPOSER
+===================================================================*/
+
+.container > .wpb_row {
+	margin-bottom: 0;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+#content .flexslider {
+	background: none;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+	#content .flexslider img {
+		height: auto;
+		width: 100%;
+	}
+
+.vc_images_carousel {
+	width: 100% !important;
+}
+
+	.vc_images_carousel.vc_per-view-more .vc_carousel-slideline .vc_carousel-slideline-inner > .vc_item > .vc_inner {
+		text-align: center;
+	}
+
+#content .vc_gitem_row .vc_gitem-col {
+	padding: 0 30px;
+}
+
+#content .vc_general.vc_btn3 {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+div.gjm-single-map-wrapper,
+div.grm-single-map-wrapper {
+	border: none;
+}
+
+/* 12. SIDEBAR
+===================================================================*/
+
+.widget.job_manager .resumes {
+	border-top: 1px solid #e7e7e7;
+}
+
+.widget.job_manager li a {
+	background: none;
+	padding: 15px;
+}
+
+	.widget.job_manager li a:hover {
+		background: #f8f8f8;
+	}
+
+	.widget.job_manager li a .position,
+	.widget.job_manager li a .meta,
+	.widget.job_manager li a .meta li {
+		display: block;
+		float: none;
+		padding: 0;
+		text-align: left;
+		width: 100%;
+	}
+
+		.widget.job_manager li a .position h3,
+		.widget.job_manager li a .candidate h3 {
+			font-family: "Lato",Helvetica,Arial,sans-serif;
+			font-size: 1em;
+			font-weight: normal;
+			letter-spacing: normal;
+			margin: 0 0 0.2em;
+			text-transform: none;
+		}
+
+			.widget.job_manager ul.job_listings .job-manager-applications-applied-notice {
+				font-size: 1em;
+			}
+
+		.widget.job_manager li a .meta .company:before,
+		.widget.job_manager li a .meta .candidate-title:before,
+		.widget.job_manager li a .meta .candidate-location:before,
+		.widget.job_manager li a .meta .job-type:before {
+			color: #14b1bb;
+			display: inline-block;
+			font-family: "FontAwesome";
+			width: 20px;
+		}
+
+		.widget.job_manager li a .meta .company:before {
+			content: "\f1ad";
+		}
+		
+		.widget.job_manager li a .meta .candidate-title:before {
+			content: "\f0b1";
+		}
+
+		.widget.job_manager li a .meta .job-type:before {
+			content: "\f017";
+		}
+
+		.widget.job_manager li a .meta .candidate-location:before {
+			content: "\f041";
+		}
+
+			.widget.job_manager li a .meta .candidate-location .candidate-location {
+				display: inline;
+			}
+
+				.widget.job_manager li a .meta .candidate-location .candidate-location:before {
+					display: none;
+				}
+
+		.widget.job_manager .job_listing:nth-child(2n) {
+			background: none;
+		}
+
+		.widget.job_manager .job_listings .job_position_featured a,
+		.widget.job_manager .resumes .resume_featured a {
+			border-left: 0;
+		}
+
+/* 13. INDEED JOBS
+===================================================================*/
+
+.indeed_job_listing a {
+	padding: 15px 0;
+}
+
+	.indeed_job_listing a:after {
+		clear: both;
+		content: "";
+		display: table;
+		height: 0;
+		width: 100%;
+	}
+
+.indeed_job_listing a img,
+.indeed_job_listing a .position,
+.indeed_job_listing a .location,
+.indeed_job_listing a .meta {
+	float: left;
+	padding: 0 15px;
+	position: relative;
+}
+
+.indeed_job_listing a img {
+	width: 10%;
+}
+
+.indeed_job_listing a .position {
+	width: 32%;
+}
+
+	.indeed_job_listing a .position h3 {
+		font-size: 1em;
+		line-height: 1.72em;
+		margin: 0;
+	}
+
+	.indeed_job_listing a .position small {
+		font-size: 1em;
+	}
+
+.indeed_job_listing a .location {
+	color: #222;
+	padding-left: 30px;
+	width: 37%;
+}
+
+.indeed_job_listing a .meta {
+	color: #222;
+	padding-left: 37px;
+	width: 21%;
+}
+
+	.indeed_job_listing a .location:before {
+		color: #14b1bb;
+		content: "\f041";
+		font-family: "FontAwesome";
+		left: 15px;
+		position: absolute;
+		top: 0;
+	}
+
+	.indeed_job_listing a .meta:before {
+		color: #14b1bb;
+		content: "\f073";
+		font-family: "FontAwesome";
+		left: 15px;
+		position: absolute;
+		top: 0;
+	}
+
+/* 14. RESPONSIVE STYLES
+===================================================================*/
+
+	/* 14.1. Big Screens
+	---------------------------------------------------------------*/
+	@media (min-width: 1200px) {
+
+		.work-experience .img-circle {
+			font-size: 36px;
+			height: 97px;
+			width: 97px;
+			line-height: 97px;
+		}
+
+	}
+
+	/* 14.2. REGULAR TABLETS
+	---------------------------------------------------------------*/
+	@media (max-width: 991px) {
+
+		ul.job_listings .col.job-logo {
+			width: 14%;
+		}
+
+		ul.job_listings .col.job-title {
+			width: 42%;
+		}
+
+		ul.job_listings .col.job-location {
+			width: 27%;
+		}
+
+		ul.job_listings .col.job-type {
+			width: 17%;
+		}
+
+		ul.job_listings .col.job-dates {
+			display: none;
+		}
+
+			.home ul.job_listings .col.job-title {
+				width: 60%;
+			}
+
+			.home ul.job_listings .col.job-location {
+				width: 40%;
+			}
+
+			.home ul.job_listings .col.job-logo,
+			.home ul.job_listings .col.job-type,
+			.home ul.job_listings .col.job-dates {
+				display: none;
+			}
+
+		ul.resumes .col.candidate-name {
+			width: 30%;
+		}
+
+		ul.resumes .col.candidate-location {
+			padding-left: 30px;
+			width: 30%;
+		}
+
+		ul.resumes .col.candidate-posted {
+			text-align: center;
+			width: 30%;
+		}
+
+		.work-experience .img-circle {
+			font-size: 24px;
+			height: 50px;
+			width: 50px;
+			line-height: 50px;
+		}
+
+		.indeed_job_listing a img {
+			width: 14%;
+		}
+
+		.indeed_job_listing a .position {
+			width: 42%;
+		}
+
+		.indeed_job_listing a .location {
+			width: 44%;
+		}
+
+		.indeed_job_listing a .meta {
+			display: none;
+		}
+
+	}
+
+	/* 14.3. SMALL TABLETS
+	---------------------------------------------------------------*/
+	@media (max-width: 767px) {
+
+		.container > .wpb_row {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+		.gjm-gmap-wrapper,
+		.grm-gmap-wrapper {
+			height: 200px !important;
+		}
+
+		.job-manager-form label,
+		.job-manager-form .field {
+			float: none;
+			width: 100%;
+		}
+
+		.job-manager-form label {
+			margin-top: 0;
+		}
+
+		#submit-resume-form fieldset:first-child,
+		#submit-job-form fieldset:first-child {
+			padding: 30px;
+		}
+
+		.search_keywords,
+		.search_location,
+		.search_categories,
+		.search_region,
+		#content .gjm-filter-wrapper,
+		#content .grm-filter-wrapper,
+		#content .gjm-filter-wrapper.radius {
+			float: none;
+			width: 100%;
+			max-width: none !important;
+		}
+
+		.search_region,
+		.wp-job-manager-bookmarks-form {
+			padding: 15px;
+		}
+
+		.form-wrapper {
+			margin: 50px 0 50px -150px;
+			padding: 30px;
+			position: absolute;
+			width: 300px;
+			top: 0;
+		}
+
+		.work-experience .img-circle {
+			font-size: 36px;
+			height: 99px;
+			width: 99px;
+			line-height: 99px;
+		}
+
+		ul.job_listings .col {
+			float: none;
+		}
+
+		ul.job_listings .col.job-logo,
+		ul.job_listings .col.job-location,
+		ul.job_listings .col.job-type,
+		ul.job_listings .col.job-dates,
+		ul.resumes .col.candidate-location,
+		ul.resumes .col.candidate-posted {
+			display: none;
+		}
+
+		ul.job_listings .col.job-title,
+		.home ul.job_listings .col.job-title {
+			width: 100%;
+		}
+
+		ul.resumes .col.candidate-photo {
+			width: 25%;
+		}
+
+		ul.resumes .col.candidate-name {
+			width: 75%;
+		}
+
+		.indeed_job_listing a img,
+		.indeed_job_listing a .location {
+			display: none;
+		}
+
+		.indeed_job_listing a .position {
+			width: 100%;
+		}
+
+	}
+	
+	
+	.cjfm-form.cjfm-register-form.cjfm-ajax-register-form label{
+		display: none;
+	}
+	
+	.cjfm-form.cjfm-login-form label{
+		display: none;
+	}

@@ -1,0 +1,1395 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR coffeecream
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: jobseek\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-01 15:45+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: archive-job_listing.php:5
+msgid "Find a Job"
+msgstr ""
+
+#: archive-job_listing.php:6
+msgid "There is no better place to start"
+msgstr ""
+
+#: archive-resume.php:5
+msgid "Candidates"
+msgstr ""
+
+#: archive-resume.php:6
+msgid "Find Your Perfect Match"
+msgstr ""
+
+#: archive-testimonial.php:5 vc_templates/extend-vc.php:972
+msgid "Testimonials"
+msgstr ""
+
+#: archive-testimonial.php:6
+msgid "Kind Words From Happy Members"
+msgstr ""
+
+#: author-bio.php:4
+msgid "About the Author"
+msgstr ""
+
+#: comments.php:12 vc_templates/recent-blog-posts.php:81
+msgid "No Comments"
+msgstr ""
+
+#: comments.php:12
+msgid "One Comment"
+msgstr ""
+
+#: comments.php:12
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:18 functions.php:424
+msgid "Reply"
+msgstr ""
+
+#: comments.php:25 content-single.php:28
+msgid "Prev"
+msgstr ""
+
+#: comments.php:26 content-single.php:28
+msgid "Next"
+msgstr ""
+
+#: comments.php:31
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:43
+msgid "Name"
+msgstr ""
+
+#: comments.php:44
+msgid "Email"
+msgstr ""
+
+#: comments.php:49
+msgid "Post Comment"
+msgstr ""
+
+#: content-job_listing.php:27 single-job_listing.php:28
+#, php-format
+msgid "Posted %s ago"
+msgstr ""
+
+#: content-none.php:3
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:7
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:12
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content-resume.php:16 single-resume.php:17
+#, php-format
+msgid "Updated %s ago"
+msgstr ""
+
+#: content-single-job_listing-company.php:35
+msgid "Learn More"
+msgstr ""
+
+#: content-single-job_listing.php:5
+msgid "This listing has expired."
+msgstr ""
+
+#: content-single-job_listing.php:19
+msgid "Job Details"
+msgstr ""
+
+#: content-single-resume.php:7
+msgid "About"
+msgstr ""
+
+#: content-single-resume.php:12
+msgid "Education"
+msgstr ""
+
+#: content-single-resume.php:23 content-single-resume.php:42
+#, php-format
+msgid "%s at %s"
+msgstr ""
+
+#: content-single-resume.php:31
+msgid "Experience"
+msgstr ""
+
+#: content-single-resume.php:67
+msgid "Skills"
+msgstr ""
+
+#: content-single.php:12
+msgid "Share it"
+msgstr ""
+
+#: content.php:19 vc_templates/recent-blog-posts.php:96
+msgid "Read more"
+msgstr ""
+
+#: functions.php:32
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:33
+msgid "Candidate Menu"
+msgstr ""
+
+#: functions.php:34
+msgid "Employer Menu"
+msgstr ""
+
+#: functions.php:64
+msgid "Home"
+msgstr ""
+
+#: functions.php:73
+msgid "Add a menu"
+msgstr ""
+
+#: functions.php:291
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:384
+msgid "Login"
+msgstr ""
+
+#: functions.php:384
+msgid "Register"
+msgstr ""
+
+#: functions.php:413
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:413
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:425
+msgid "Edit"
+msgstr ""
+
+#: functions.php:429
+msgid "author"
+msgstr ""
+
+#: functions.php:433
+#, php-format
+msgid "%1$s @ %2$s"
+msgstr ""
+
+#: functions.php:436
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:440
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:456
+msgctxt "noun"
+msgid "Comment *"
+msgstr ""
+
+#: page-sidebar-left.php:32 page-sidebar-right.php:31 page.php:28
+msgid "Pages:"
+msgstr ""
+
+#: page-sidebar-left.php:36 page-sidebar-right.php:35 page.php:32
+msgid "Page"
+msgstr ""
+
+#: searchform.php:1
+msgid "To search type and hit enter&hellip;"
+msgstr ""
+
+#: single-company.php:6
+#, php-format
+msgid "Jobs at %s"
+msgstr ""
+
+#: single-company.php:8
+#, php-format
+msgid "%d Job Available"
+msgid_plural "%d Jobs Available"
+msgstr[0] ""
+msgstr[1] ""
+
+#: single-company.php:38
+msgid "Company Details"
+msgstr ""
+
+#: single-company.php:47
+msgid "Website"
+msgstr ""
+
+#: single-company.php:54
+msgid "Twitter"
+msgstr ""
+
+#: single-job_listing.php:31
+msgid "This position has been filled"
+msgstr ""
+
+#: single-job_listing.php:33
+msgid "Applications have closed"
+msgstr ""
+
+#: single-job_listing.php:75
+msgid "Share This Job"
+msgstr ""
+
+#: inc/blog-title.php:15
+msgid "Blog"
+msgstr ""
+
+#: inc/blog-title.php:30
+msgid "Search Results"
+msgstr ""
+
+#: inc/blog-title.php:31
+#, php-format
+msgid "for: \"%s\""
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:161 inc/plugins.php:98
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:162 inc/plugins.php:99
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:163 inc/plugins.php:100
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:164
+msgid "Something went wrong."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:165 inc/plugins.php:102
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:166 inc/plugins.php:103
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:167 inc/plugins.php:104
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:168 inc/plugins.php:105
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:169 inc/plugins.php:106
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:170 inc/plugins.php:107
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:171 inc/plugins.php:108
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:172 inc/plugins.php:109
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:173 inc/plugins.php:110
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:174
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:175 inc/plugins.php:112
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:176
+msgid "Return to the dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:177
+#: inc/class-tgm-plugin-activation.php:1956 inc/plugins.php:113
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:178
+#: inc/class-tgm-plugin-activation.php:1644
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:179
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:180
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:532
+#: inc/class-tgm-plugin-activation.php:2173
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1167
+#: inc/class-tgm-plugin-activation.php:1348
+msgid "Private Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1170
+#: inc/class-tgm-plugin-activation.php:1351
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1175
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1178
+msgid "Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1178
+msgid "Recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1181
+msgid "Not Installed"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1183
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1288
+#: inc/class-tgm-plugin-activation.php:1409
+msgid "Install"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1312
+#: inc/class-tgm-plugin-activation.php:1410
+msgid "Activate"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1372
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1388
+msgid "Plugin"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1389
+msgid "Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1390
+msgid "Type"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1391
+msgid "Status"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1939
+msgid "Install package not available."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1940
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1941
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1942
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1943
+msgid "Plugin install failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1944
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1955
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2069
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2070
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2070
+#: inc/class-tgm-plugin-activation.php:2079
+msgid "Show Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2070
+#: inc/class-tgm-plugin-activation.php:2079
+msgid "Hide Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2071
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2072
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2076
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2077
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2078
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2079
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2080
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2081
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/customizer.php:23 vc_templates/extend-vc.php:203
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:41
+msgid "Logo Height in Pixels"
+msgstr ""
+
+#: inc/customizer.php:54
+msgid "Use Page Loader"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Jobs Listing"
+msgstr ""
+
+#: inc/customizer.php:83
+msgid "Enable Salary"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "Allowed Salary Value"
+msgstr ""
+
+#: inc/customizer.php:128
+msgid "Currency Sign (Before)"
+msgstr ""
+
+#: inc/customizer.php:146
+msgid "Currency Sign (After)"
+msgstr ""
+
+#: inc/customizer.php:164
+msgid "Thousands Separator"
+msgstr ""
+
+#: inc/customizer.php:175
+msgid "Footer Settings"
+msgstr ""
+
+#: inc/customizer.php:186
+msgid ""
+"&copy; 2015 Jobseek - Responsive Job Board WordPress Theme<br>Designed &amp; "
+"Developed by <a href=\"http://themeforest.net/user/Coffeecream\" target="
+"\"_blank\">Coffeecream Themes</a>"
+msgstr ""
+
+#: inc/customizer.php:195
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:213
+msgid "Footer Sidebar Column 1"
+msgstr ""
+
+#: inc/customizer.php:238
+msgid "Footer Sidebar Column 2"
+msgstr ""
+
+#: inc/customizer.php:263
+msgid "Footer Sidebar Column 3"
+msgstr ""
+
+#: inc/customizer.php:288
+msgid "Footer Sidebar Column 4"
+msgstr ""
+
+#: inc/customizer.php:303
+msgid "Color Schemes"
+msgstr ""
+
+#: inc/customizer.php:330
+msgid "Header Background"
+msgstr ""
+
+#: inc/customizer.php:352
+msgid "Dropdown Background"
+msgstr ""
+
+#: inc/customizer.php:396
+msgid "Accent Color"
+msgstr ""
+
+#: inc/customizer.php:418
+msgid "Accent Hover Color"
+msgstr ""
+
+#: inc/customizer.php:440
+msgid "User Nav Link Color"
+msgstr ""
+
+#: inc/customizer.php:441
+msgid "Login / Register / Dashboard / Logout links color in main menu."
+msgstr ""
+
+#: inc/customizer.php:463
+msgid "Body Text Color"
+msgstr ""
+
+#: inc/customizer.php:485 inc/customizer.php:646
+msgid "H1"
+msgstr ""
+
+#: inc/customizer.php:507 inc/customizer.php:668
+msgid "H2"
+msgstr ""
+
+#: inc/customizer.php:529 inc/customizer.php:690
+msgid "H3"
+msgstr ""
+
+#: inc/customizer.php:551 inc/customizer.php:712
+msgid "H4"
+msgstr ""
+
+#: inc/customizer.php:573 inc/customizer.php:734
+msgid "H5"
+msgstr ""
+
+#: inc/customizer.php:595 inc/customizer.php:756
+msgid "H6"
+msgstr ""
+
+#: inc/customizer.php:624
+msgid "Text"
+msgstr ""
+
+#: inc/meta-fields.php:74
+msgid "Page Title Settings"
+msgstr ""
+
+#: inc/meta-fields.php:83
+msgid "Page Title"
+msgstr ""
+
+#: inc/meta-fields.php:84
+msgid "show / hide page title on this page"
+msgstr ""
+
+#: inc/meta-fields.php:89 vc_templates/extend-vc.php:985
+msgid "Show"
+msgstr ""
+
+#: inc/meta-fields.php:90
+msgid "Hide"
+msgstr ""
+
+#: inc/meta-fields.php:95 vc_templates/extend-vc.php:25
+#: vc_templates/extend-vc.php:42 vc_templates/extend-vc.php:44
+msgid "Subtitle"
+msgstr ""
+
+#: inc/meta-fields.php:96
+msgid "subtitle will be displayed below the page title (optional)"
+msgstr ""
+
+#: inc/plugins.php:101
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/plugins.php:111
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins.php:114
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: inc/post-meta.php:6
+msgid "0"
+msgstr ""
+
+#: inc/post-meta.php:6
+msgid "1"
+msgstr ""
+
+#: inc/post-meta.php:6
+msgid "%"
+msgstr ""
+
+#: inc/social-profiles-widget.php:15
+msgid "Social Profiles"
+msgstr ""
+
+#: inc/social-profiles-widget.php:17
+msgid "Display your social profiles"
+msgstr ""
+
+#: inc/wp-job-manager-salary.php:9 inc/wp-job-manager-salary.php:24
+msgid "Salary ($)"
+msgstr ""
+
+#: inc/wp-job-manager-salary.php:50 inc/wp-job-manager-salary.php:58
+msgid "Salary:"
+msgstr ""
+
+#: inc/wp_bootstrap_pagination.php:11
+msgid "<i class=\"glyphicon glyphicon-chevron-left\"></i>"
+msgstr ""
+
+#: inc/wp_bootstrap_pagination.php:12
+msgid "<i class=\"glyphicon glyphicon-chevron-right\"></i>"
+msgstr ""
+
+#: inc/wp_bootstrap_pagination.php:57
+msgid "First"
+msgstr ""
+
+#: inc/wp_bootstrap_pagination.php:60
+msgid "previous"
+msgstr ""
+
+#: inc/wp_bootstrap_pagination.php:75
+msgid "next"
+msgstr ""
+
+#: inc/wp_bootstrap_pagination.php:79
+msgid "Last"
+msgstr ""
+
+#: job_manager/job-application.php:7
+msgid "Apply for job"
+msgstr ""
+
+#: job_manager/job-application.php:11
+msgid "Apply"
+msgstr ""
+
+#: vc_templates/extend-vc.php:7
+msgid "HGroup"
+msgstr ""
+
+#: vc_templates/extend-vc.php:9
+msgid "Header group (title and subtitle)"
+msgstr ""
+
+#: vc_templates/extend-vc.php:19
+msgid "Main Title"
+msgstr ""
+
+#: vc_templates/extend-vc.php:31 vc_templates/extend-vc.php:60
+#: vc_templates/extend-vc.php:185 vc_templates/extend-vc.php:242
+#: vc_templates/extend-vc.php:960 vc_templates/extend-vc.php:1024
+#: vc_templates/extend-vc.php:1077
+msgid "Extra class name"
+msgstr ""
+
+#: vc_templates/extend-vc.php:33 vc_templates/extend-vc.php:62
+#: vc_templates/extend-vc.php:187 vc_templates/extend-vc.php:244
+msgid ""
+"If you wish to style particular content element differently, then use this "
+"field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: vc_templates/extend-vc.php:54 vc_templates/extend-vc.php:83
+#: vc_templates/extend-vc.php:265
+msgid "Title"
+msgstr ""
+
+#: vc_templates/extend-vc.php:71
+msgid "Pricing Table"
+msgstr ""
+
+#: vc_templates/extend-vc.php:73
+msgid "Title, list and button"
+msgstr ""
+
+#: vc_templates/extend-vc.php:89
+msgid "Price"
+msgstr ""
+
+#: vc_templates/extend-vc.php:95
+msgid "List"
+msgstr ""
+
+#: vc_templates/extend-vc.php:103 vc_templates/extend-vc.php:1036
+msgid "Button"
+msgstr ""
+
+#: vc_templates/extend-vc.php:113
+msgid "Link"
+msgstr ""
+
+#: vc_templates/extend-vc.php:122
+msgid "Product ID"
+msgstr ""
+
+#: vc_templates/extend-vc.php:131
+msgid "Button Text"
+msgstr ""
+
+#: vc_templates/extend-vc.php:140
+msgid "Highlight"
+msgstr ""
+
+#: vc_templates/extend-vc.php:151
+msgid "Logo Carousel"
+msgstr ""
+
+#: vc_templates/extend-vc.php:153
+msgid "Show brand logos in a nice carousel"
+msgstr ""
+
+#: vc_templates/extend-vc.php:165
+msgid "Visible Items"
+msgstr ""
+
+#: vc_templates/extend-vc.php:178
+msgid "Autoplay"
+msgstr ""
+
+#: vc_templates/extend-vc.php:181
+msgid ""
+"Accepted values: true, false, or time in milliseconds like 5000, which will "
+"be 5 seconds."
+msgstr ""
+
+#: vc_templates/extend-vc.php:194
+msgid "Logo Item"
+msgstr ""
+
+#: vc_templates/extend-vc.php:208
+msgid "URL"
+msgstr ""
+
+#: vc_templates/extend-vc.php:210
+msgid "Optional."
+msgstr ""
+
+#: vc_templates/extend-vc.php:228
+msgid "Counter Up"
+msgstr ""
+
+#: vc_templates/extend-vc.php:230
+msgid "Stat counter with animation"
+msgstr ""
+
+#: vc_templates/extend-vc.php:251
+msgid "Counter Up Item"
+msgstr ""
+
+#: vc_templates/extend-vc.php:260
+msgid "Number"
+msgstr ""
+
+#: vc_templates/extend-vc.php:289
+msgid "Jobs List"
+msgstr ""
+
+#: vc_templates/extend-vc.php:291
+msgid "Adds a job board"
+msgstr ""
+
+#: vc_templates/extend-vc.php:301 vc_templates/extend-vc.php:916
+msgid "Layout"
+msgstr ""
+
+#: vc_templates/extend-vc.php:307 vc_templates/extend-vc.php:329
+#: vc_templates/extend-vc.php:728
+msgid "Choose order parameter."
+msgstr ""
+
+#: vc_templates/extend-vc.php:311 vc_templates/extend-vc.php:709
+msgid "Items Per Page"
+msgstr ""
+
+#: vc_templates/extend-vc.php:314
+msgid "How many items to show in the job list."
+msgstr ""
+
+#: vc_templates/extend-vc.php:318 vc_templates/extend-vc.php:491
+#: vc_templates/extend-vc.php:717 vc_templates/extend-vc.php:832
+msgid "Order By"
+msgstr ""
+
+#: vc_templates/extend-vc.php:333 vc_templates/extend-vc.php:733
+msgid "Order"
+msgstr ""
+
+#: vc_templates/extend-vc.php:339 vc_templates/extend-vc.php:739
+msgid "Choose sorting order."
+msgstr ""
+
+#: vc_templates/extend-vc.php:343 vc_templates/extend-vc.php:744
+msgid "Show Filters"
+msgstr ""
+
+#: vc_templates/extend-vc.php:349
+msgid "Whether show filters by keyword, region, category, type or not..."
+msgstr ""
+
+#: vc_templates/extend-vc.php:353
+msgid "Show Pagination"
+msgstr ""
+
+#: vc_templates/extend-vc.php:359
+msgid ""
+"Enable this to show numbered pagination instead of the \"load more jobs\" "
+"link."
+msgstr ""
+
+#: vc_templates/extend-vc.php:363 vc_templates/extend-vc.php:755
+msgid "Show Categories"
+msgstr ""
+
+#: vc_templates/extend-vc.php:369
+msgid ""
+"If enabled, the filters will also show a dropdown letting the user choose a "
+"job category to filter by."
+msgstr ""
+
+#: vc_templates/extend-vc.php:373 vc_templates/extend-vc.php:765
+#: vc_templates/extend-vc.php:953
+msgid "Categories"
+msgstr ""
+
+#: vc_templates/extend-vc.php:376 vc_templates/extend-vc.php:956
+msgid ""
+"Put one category slug per line to limit the jobs to certain categories. This "
+"option overrides \"show_categories\" if both are set."
+msgstr ""
+
+#: vc_templates/extend-vc.php:380
+msgid "Job Types"
+msgstr ""
+
+#: vc_templates/extend-vc.php:383
+msgid ""
+"List of job type slugs (one per line) to limit the jobs to certain job types."
+msgstr ""
+
+#: vc_templates/extend-vc.php:387
+msgid "Selected Job Types"
+msgstr ""
+
+#: vc_templates/extend-vc.php:390
+msgid "List of job type slugs (one per line) to select by default."
+msgstr ""
+
+#: vc_templates/extend-vc.php:394
+msgid "Location"
+msgstr ""
+
+#: vc_templates/extend-vc.php:397
+msgid "Enter a location keyword to search by default."
+msgstr ""
+
+#: vc_templates/extend-vc.php:401
+msgid "Keywords"
+msgstr ""
+
+#: vc_templates/extend-vc.php:404
+msgid "Enter a keyword to search by default."
+msgstr ""
+
+#: vc_templates/extend-vc.php:408
+msgid "Featured"
+msgstr ""
+
+#: vc_templates/extend-vc.php:415
+msgid ""
+"Set to Yes to show only featured jobs, No to show no featured jobs, or Both "
+"show both (featured first)."
+msgstr ""
+
+#: vc_templates/extend-vc.php:420
+msgid "Filled"
+msgstr ""
+
+#: vc_templates/extend-vc.php:427
+msgid ""
+"Set to true to show only filled jobs, false to show no filled jobs, or leave "
+"out entirely to respect the default settings."
+msgstr ""
+
+#: vc_templates/extend-vc.php:434 vc_templates/extend-vc.php:775
+msgid "Use Map"
+msgstr ""
+
+#: vc_templates/extend-vc.php:435
+msgid "Works only if WP Job Manager Geolocation installed."
+msgstr ""
+
+#: vc_templates/extend-vc.php:445 vc_templates/extend-vc.php:786
+msgid "Display Map"
+msgstr ""
+
+#: vc_templates/extend-vc.php:458 vc_templates/extend-vc.php:799
+msgid "Google Address Autocomplete"
+msgstr ""
+
+#: vc_templates/extend-vc.php:471 vc_templates/extend-vc.php:812
+#: vc_templates/extend-vc.php:1105 vc_templates/extend-vc.php:1161
+msgid "Map Width"
+msgstr ""
+
+#: vc_templates/extend-vc.php:472 vc_templates/extend-vc.php:813
+#: vc_templates/extend-vc.php:1106 vc_templates/extend-vc.php:1162
+msgid "Example: 100%. Default is 250px."
+msgstr ""
+
+#: vc_templates/extend-vc.php:481 vc_templates/extend-vc.php:822
+#: vc_templates/extend-vc.php:1111 vc_templates/extend-vc.php:1167
+msgid "Map Height"
+msgstr ""
+
+#: vc_templates/extend-vc.php:482 vc_templates/extend-vc.php:823
+#: vc_templates/extend-vc.php:1112 vc_templates/extend-vc.php:1168
+msgid "Example: 450px. Default is 250px."
+msgstr ""
+
+#: vc_templates/extend-vc.php:493 vc_templates/extend-vc.php:834
+msgid ""
+"Enter the desired values, comma separated, in the order you want them to "
+"appear. Default will be \"distance,featured,title,date\"."
+msgstr ""
+
+#: vc_templates/extend-vc.php:501 vc_templates/extend-vc.php:842
+msgid "Radius"
+msgstr ""
+
+#: vc_templates/extend-vc.php:502 vc_templates/extend-vc.php:843
+msgid ""
+"Enter the desired radius values. Enter single value for a default value with "
+"no dropdown or multiple values, comma separated, for a dropdown select box. "
+"Default: 5,10,15,25,50,100."
+msgstr ""
+
+#: vc_templates/extend-vc.php:511 vc_templates/extend-vc.php:852
+msgid "Units"
+msgstr ""
+
+#: vc_templates/extend-vc.php:512 vc_templates/extend-vc.php:853
+msgid "If both selected the select option will be shown."
+msgstr ""
+
+#: vc_templates/extend-vc.php:526 vc_templates/extend-vc.php:867
+msgid "Distance"
+msgstr ""
+
+#: vc_templates/extend-vc.php:527
+msgid "Display the distance of each job in the results."
+msgstr ""
+
+#: vc_templates/extend-vc.php:540
+msgid "Scroll to Job"
+msgstr ""
+
+#: vc_templates/extend-vc.php:541
+msgid ""
+"Scroll down the window to a job when a the user clicks a marker on the map."
+msgstr ""
+
+#: vc_templates/extend-vc.php:560
+msgid "Job"
+msgstr ""
+
+#: vc_templates/extend-vc.php:562
+msgid "Single job with details"
+msgstr ""
+
+#: vc_templates/extend-vc.php:572 vc_templates/extend-vc.php:596
+msgid "Job ID"
+msgstr ""
+
+#: vc_templates/extend-vc.php:575
+msgid ""
+"Outputs a single job by ID. You can find the id by viewing the list of jobs "
+"in admin."
+msgstr ""
+
+#: vc_templates/extend-vc.php:584
+msgid "Job Summary"
+msgstr ""
+
+#: vc_templates/extend-vc.php:586
+msgid "A nice job banner"
+msgstr ""
+
+#: vc_templates/extend-vc.php:599
+msgid ""
+"Outputs a single job's summary by ID. You can find the id by viewing the "
+"list of jobs in admin."
+msgstr ""
+
+#: vc_templates/extend-vc.php:603
+msgid "Width"
+msgstr ""
+
+#: vc_templates/extend-vc.php:606
+msgid "'Auto' is highly recommended."
+msgstr ""
+
+#: vc_templates/extend-vc.php:615
+msgid "Submit Job Form"
+msgstr ""
+
+#: vc_templates/extend-vc.php:617
+msgid "Form to post a new job"
+msgstr ""
+
+#: vc_templates/extend-vc.php:630
+msgid "Job Dashboard"
+msgstr ""
+
+#: vc_templates/extend-vc.php:632
+msgid "Job dashboard used by logged in users"
+msgstr ""
+
+#: vc_templates/extend-vc.php:645
+msgid "Past Applications"
+msgstr ""
+
+#: vc_templates/extend-vc.php:647
+msgid "Allow employees to view their past applications"
+msgstr ""
+
+#: vc_templates/extend-vc.php:667
+msgid "Submit Resume Form"
+msgstr ""
+
+#: vc_templates/extend-vc.php:669
+msgid "Frontend resume submission form"
+msgstr ""
+
+#: vc_templates/extend-vc.php:682
+msgid "Candidate Dashboard"
+msgstr ""
+
+#: vc_templates/extend-vc.php:684
+msgid "Displays a users submitted resumes"
+msgstr ""
+
+#: vc_templates/extend-vc.php:697
+msgid "Resumes"
+msgstr ""
+
+#: vc_templates/extend-vc.php:699
+msgid "Output resumes to a page"
+msgstr ""
+
+#: vc_templates/extend-vc.php:712
+msgid "How many items to show in the resume list."
+msgstr ""
+
+#: vc_templates/extend-vc.php:750
+msgid ""
+"Show filters above the resume list (to allow searching by location etc)."
+msgstr ""
+
+#: vc_templates/extend-vc.php:761
+msgid "Whether or not to show categories in the filters."
+msgstr ""
+
+#: vc_templates/extend-vc.php:768
+msgid ""
+"List of category slugs (one per line). Only resumes in these categories will "
+"be displayed."
+msgstr ""
+
+#: vc_templates/extend-vc.php:776
+msgid "Works only if WP Resume Manager Geolocation installed."
+msgstr ""
+
+#: vc_templates/extend-vc.php:868
+msgid "Display the distance of each resume in the results."
+msgstr ""
+
+#: vc_templates/extend-vc.php:881
+msgid "Scroll to Resume"
+msgstr ""
+
+#: vc_templates/extend-vc.php:882
+msgid ""
+"Scroll down the window to a resume when a the user clicks a marker on the "
+"map."
+msgstr ""
+
+#: vc_templates/extend-vc.php:903
+msgid "Recent Blog Posts"
+msgstr ""
+
+#: vc_templates/extend-vc.php:905
+msgid "Carousel or grid of blog posts"
+msgstr ""
+
+#: vc_templates/extend-vc.php:925 vc_templates/extend-vc.php:1017
+msgid "Carousel Autoplay"
+msgstr ""
+
+#: vc_templates/extend-vc.php:928 vc_templates/extend-vc.php:1020
+msgid ""
+"In milliseconds (1000 = 1 second), example for 5 seconds: 5000. Leave empty "
+"to disable autoplay."
+msgstr ""
+
+#: vc_templates/extend-vc.php:936 vc_templates/extend-vc.php:995
+msgid "Posts"
+msgstr ""
+
+#: vc_templates/extend-vc.php:939
+msgid "How many latest posts to get."
+msgstr ""
+
+#: vc_templates/extend-vc.php:943
+msgid "Columns"
+msgstr ""
+
+#: vc_templates/extend-vc.php:963 vc_templates/extend-vc.php:1027
+#: vc_templates/extend-vc.php:1080
+msgid ""
+"Style particular content element differently - add a class name and refer to "
+"it in custom CSS."
+msgstr ""
+
+#: vc_templates/extend-vc.php:974
+msgid "Testimonials carousel"
+msgstr ""
+
+#: vc_templates/extend-vc.php:998
+msgid "How many posts to get."
+msgstr ""
+
+#: vc_templates/extend-vc.php:1006
+msgid "Posts ID's"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1009
+msgid "Testimonial posts ID's separated by comma, example: 14,95,164."
+msgstr ""
+
+#: vc_templates/extend-vc.php:1048
+msgid "Color"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1062
+msgid "Size"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1072
+msgid "Link & Title"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1093
+msgid "Jobs Global Map"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1095
+msgid "All jobs on a map."
+msgstr ""
+
+#: vc_templates/extend-vc.php:1117 vc_templates/extend-vc.php:1173
+msgid "Map Type"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1128 vc_templates/extend-vc.php:1184
+msgid "Marker Cluster"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1137
+msgid "Jobs Count"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1138
+msgid ""
+"Set the maximum number of jobs that can be display on the map. Default is "
+"200."
+msgstr ""
+
+#: vc_templates/extend-vc.php:1149
+msgid "Resumes Global Map"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1151
+msgid "All resumes on a map."
+msgstr ""
+
+#: vc_templates/extend-vc.php:1193
+msgid "Resumes Count"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1194
+msgid ""
+"Set the maximum number of resumes that can be display on the map. Default is "
+"200."
+msgstr ""
+
+#: vc_templates/extend-vc.php:1207
+msgid "Color Scheme"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1209
+msgid ""
+"This parameter allow you to switch beetwen of 3 various color sets (for "
+"title, subtitle, text and link colors). You can manage these colors sets in "
+"theme options panel."
+msgstr ""
+
+#: vc_templates/extend-vc.php:1211
+msgid "Default"
+msgstr ""
+
+#: vc_templates/extend-vc.php:1212
+msgid "Alternative"
+msgstr ""
+
+#: vc_templates/recent-blog-posts.php:83
+msgid " Comments"
+msgstr ""
+
+#: vc_templates/recent-blog-posts.php:85
+msgid "1 Comment"
+msgstr ""

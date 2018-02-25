@@ -1,0 +1,44 @@
+<?php
+
+require_once('wp-config.php');
+
+$link = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+
+if (!$link) {
+    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+    exit;
+}
+
+echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
+echo "<br /> Host information: " . mysqli_get_host_info($link) . PHP_EOL;
+
+
+// Searh for GUID's
+
+$sql_search = "SELECT * FROM wp_posts WHERE guid LIKE 'https://www.sezplus.com%';";
+$result = mysqli_query($link,$sql_search);
+printf("<br/> Select returned %d rows.\n", mysqli_num_rows($result));
+
+if(mysqli_num_rows($result) > 0)
+{
+	$rArr = array();
+	while ($row = $result->fetch_assoc()) 
+	{
+		$rArr[] = $row;
+		// update this row['ID'] guid
+		$uGUID = str_replace("https://www.sezplus.com/","https://sezplus.com/",$row['guid']);
+		$sql_update = "UPDATE wp_posts SET guid = '{$uGUID}' WHERE ID = '{$row["ID"]}'; ";
+		print("<br/> $sql_update");
+		mysqli_query($link,$sql_update);	
+    	}
+	
+}
+#print_r($rArr);
+
+
+mysqli_close($link);
+
+
+?>
