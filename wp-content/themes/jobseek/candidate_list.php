@@ -1,9 +1,6 @@
 <?php
-
-/**
-
+/*
  * Template Name: CandidateList
-
  */
 get_header();
 global $resume_preview;
@@ -170,11 +167,7 @@ if($applicantmeta){
                  ';
                  $i=0;
 	foreach ($applicantmeta as $key => $value) {
-    $i++
-    @$pos=strpos($value['postmeta']['_resume_content'][0], ' ',300);
-    if($pos == false) {
-        $pos = 300;
-    }
+    $i++;
 			echo "
               <tr>
                 <td>{$i}</td>
@@ -192,7 +185,6 @@ if($applicantmeta){
 
 /*
 echo '
-<!--
                     <div class="vc_row wpb_row vc_row-fluid color-default">
                        <div class="wpb_column vc_column_container vc_col-sm-3">
                           <div class="wpb_wrapper">
@@ -241,8 +233,7 @@ echo '
                           </div>
                        </div>
                     </div>
-                  </div>
--->';
+                  </div>';
 */
 
 	}
@@ -253,6 +244,4 @@ echo '
           </section>';
 }
 ?>
-
-<?php
-get_footer();
+<?php get_footer();
