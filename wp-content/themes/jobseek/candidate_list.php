@@ -167,12 +167,12 @@ if($applicantmeta){
                  ';
                  $i=0;
 	foreach ($applicantmeta as $key => $value) {
-    $i++;
+      $i++;
 			echo "
               <tr>
                 <td>{$i}</td>
-                <td><a href=\"'.$value['postdata']['guid'].'?referrer=c_list\" target=\"_blank\">'.$value['postmeta']['_candidate_name'][0].'</a></td>
-                <td><i class=\"fa fa-location-arrow\"></i> '.$value['postmeta']['_candidate_location'][0].'</td>
+                <td><a href='{$value['postdata']['guid']}?referrer=c_list' target='_blank'>{$value['postmeta']['_candidate_name'][0]}</a></td>
+                <td><i class='fa fa-location-arrow'></i> {$value['postmeta']['_candidate_location'][0]}</td>
                 ";
                 if($value['candidature_status'] !== '0') {
                     echo '<td><button onclick="printpage('.$value['postdata']['post_author'].')" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-mulled-wine"><i class="vc_btn3-icon fa fa-download"></i> Download Resume</button></td>';
