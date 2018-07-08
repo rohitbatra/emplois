@@ -5,7 +5,7 @@
 get_header();
 include("database.php");
 $user_ID = get_current_user_id();
-
+var_dump($user_ID);die();
 $current_user = wp_get_current_user();
 if ( !($current_user instanceof WP_User) )
    return;
@@ -41,9 +41,7 @@ if(empty($nojob)) {
       $nojob = true;
    }
 }
-var_dump($nojob);
-var_dump($myjoblist);
-exit;
+
 		echo '
           <section id="content">
              <div class="container">
@@ -151,75 +149,52 @@ echo '
             </div>
          </div>';
 
-
-         if(!$nojob){
-
+         if(!$nojob) {
             foreach ($final_post as $key => $value) {
-
-            echo '<div class="border_bottom wpb_column vc_column_container vc_col-sm-9">
-               <div class="wpb_wrapper">
-                  <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                     <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="wpb_wrapper">
-                           <h2 style="text-align: left" class="vc_custom_heading vc_custom_1459159557504">'.$value['title'].'</h2>
-                        </div>
-                     </div>
-                     <div class="wpb_column vc_column_container vc_col-sm-6">
-                        <div class="wpb_wrapper">
-                           <h3 style="text-align: left" class="vc_custom_heading vc_custom_1459159619550">Job / role description </h3>
-                           <div class="wpb_text_column wpb_content_element  vc_custom_1459159604384">
+                  echo '<div class="border_bottom wpb_column vc_column_container vc_col-sm-9">
+                     <div class="wpb_wrapper">
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                           <div class="wpb_column vc_column_container vc_col-sm-3">
                               <div class="wpb_wrapper">
-                                 <p>'.$value['description'].'</p>
+                                 <h2 style="text-align: left" class="vc_custom_heading vc_custom_1459159557504">'.$value['title'].'</h2>
+                              </div>
+                           </div>
+                           <div class="wpb_column vc_column_container vc_col-sm-6">
+                              <div class="wpb_wrapper">
+                                 <h3 style="text-align: left" class="vc_custom_heading vc_custom_1459159619550">Job / role description </h3>
+                                 <div class="wpb_text_column wpb_content_element  vc_custom_1459159604384">
+                                    <div class="wpb_wrapper">
+                                       <p>'.$value['description'].'</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="wpb_column vc_column_container vc_col-sm-3">
+                              <div class="wpb_wrapper">
+                                 <div class="wpb_text_column wpb_content_element ">
+                                    <div class="wpb_wrapper">
+                                       <p style="text-align: center;"><a style="font-size: 25px;">'.$value['count'].' <i class="vc_btn3-icon fa fa-users"></i></a><br>
+                                          Number Of Candidate Applied
+                                       </p>
+                                    </div>
+                                 </div>
+                                 <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_shadow vc_sep_border_width_8 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
+                                 </div>
+                                 <div class="vc_btn3-container  wpb_animate_when_almost_visible wpb_bottom-to-top vc_btn3-center wpb_start_animation"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange"><i class="vc_btn3-icon fa fa-users"></i> View Candidate</button></div>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="wpb_wrapper">
-                           <div class="wpb_text_column wpb_content_element ">
-                              <div class="wpb_wrapper">
-                                 <p style="text-align: center;"><a style="font-size: 25px;">'.$value['count'].' <i class="vc_btn3-icon fa fa-users"></i></a><br>
-                                    Number Of Candidate Applied
-                                 </p>
-                              </div>
-                           </div>
-                           <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_shadow vc_sep_border_width_8 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
-                           </div>
-                           <div class="vc_btn3-container  wpb_animate_when_almost_visible wpb_bottom-to-top vc_btn3-center wpb_start_animation"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange"><i class="vc_btn3-icon fa fa-users"></i> View Candidate</button></div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>';
+                  </div>';
 
-            }
-         }
-
-
-         echo '
-
-
-
-      </div>
-   </div>
-</section>';
-
-
-
+                  }
+               }
+               echo '
+            </div>
+         </div>
+      </section>';
 	}
-}else{
-
-
-	echo 'you are not allowed here.';
+} else {
+	echo '<h2>You are not allowed here.</h2>';
 }
-
-
-
-
-
-
-?>
-
-
-<?php
 get_footer();
