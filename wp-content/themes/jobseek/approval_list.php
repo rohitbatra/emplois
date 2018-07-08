@@ -43,7 +43,7 @@ $applicantmeta = get_user_meta($user_ID);
 
 <section id="content"<?php if( $page_title != 'show' ) { ?> class="no-title"<?php } ?>>
 	<div class="container">
-    <?php 
+    <?php
             if($user_ID != 0 && strtolower($roles['0']) == 'employer' )
             {
                  // SQL For Employer
@@ -103,41 +103,39 @@ $applicantmeta = get_user_meta($user_ID);
                 if(strtolower($roles['0']) == 'subscriber' || strtolower($roles['0']) == 'candidate')
                 {
                    $path = pathinfo($_SERVER['REQUEST_URI']);
-                    while($row = $result->fetch_assoc())
-                    {
-
-                        if(isset($_GET['id']) && ($row['id'] === $_GET['id']))
-                        {
+                   print('<table class="job-manager-jobs table table-striped">
+                            <thead>
+                            <tr>
+                              <th class="job_title">#</th>
+                              <th class="date">Company Name</th>
+                              <th class="date">Location</th>
+                              <th class="date">State</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                          ');
+                    $i=0;
+                    while($row = $result->fetch_assoc()) {
+                        $i++;
+                        if(isset($_GET['id']) && ($row['id'] === $_GET['id'])) {
                             $currResult = $row;
-
                         }
-                        print('<div class="vc_row wpb_row vc_inner vc_row-fluid">
-                            <div class="wpb_column vc_column_container vc_col-sm-8">
-                               <div class="wpb_wrapper">
-                                  <h2 class="subtitle">'.$row['company_name'].'</h2>
-                                  <div class="wpb_text_column wpb_content_element ">
-                                     <div class="wpb_wrapper">
-                                        <p>Company Location: '.ucwords(strtolower($row['company_address_1'])) .', ' .ucwords(strtolower($row['company_address_2'])) .', '.ucwords(strtolower($row['company_city'])).' - '.ucwords(strtolower($row['company_state'])).'</p>
-                                     </div>
-                                  </div>
-                               </div>
-                            </div>
-                            <div class="wpb_column vc_column_container vc_col-sm-4">
-                               <div class="wpb_wrapper">');
-                                if($row['approved_by_candidate'] !== '1')
-                                {
-                                  print('<div class="vc_btn3-container vc_btn3-center"><a href="'.get_site_url().'/dashboard/approval-list?id='.$row['id'].'&action=employer"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange" onclick="javascript:void(1);"><i class="vc_btn3-icon fa fa-file-text"></i> Pending Approval</button></a></div>');
+                        print("<tr>
+                                  <td>{$i}</td>
+                                  <td>{$row['company_name']}</td>
+                                  <td>".ucwords(strtolower($row['company_address_1'])) .', ' .ucwords(strtolower($row['company_address_2'])) .', '.ucwords(strtolower($row['company_city'])).' - '.ucwords(strtolower($row['company_state']))."</td>");
+                                  if($row['approved_by_candidate'] !== '1')
+                                  {
+                                    print('<td><a href="'.get_site_url().'/dashboard/approval-list?id='.$row['id'].'&action=employer"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange" onclick="javascript:void(1);"><i class="vc_btn3-icon fa fa-file-text"></i> Pending Approval</button></a></td>');
 
-                                }else{
+                                  }else{
 
-                                  print('<div class="vc_btn3-container vc_btn3-center" data-sr-id='.$row['id'].'><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-green" onclick="javascript:void(1);"><i class="vc_btn3-icon fa fa-file-text"></i> Approved</button></div>');
-                                }
-                               print('
-                               </div>
-                            </div>
-                         </div>
-                         <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_turquoise"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span></div>');
+                                    print('<td data-sr-id='.$row['id'].'><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-green" onclick="javascript:void(1);"><i class="vc_btn3-icon fa fa-file-text"></i> Approved</button></td>');
+                                  }
                      }
+
+                     print("</tbody>
+                     </table>");
                 }
                 if(!empty($currResult))
                 {
@@ -178,7 +176,7 @@ $applicantmeta = get_user_meta($user_ID);
                                         $candidate_phone_number = $applicantmeta['phone_no'][0];
 
                                     }
-					
+
 
                                     $candidate_name  =  $applicantmeta['first_name'][0] ." ". $applicantmeta['last_name'][0];
 
