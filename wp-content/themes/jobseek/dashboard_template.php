@@ -1,8 +1,9 @@
 <?php
 /* Template name: Dashboard Template */
+// NOT USED
 get_header();
 $user_ID = get_current_user_id();
-var_dump($user_ID);die();
+#var_dump($user_ID);die();
 $current_user = wp_get_current_user();
 if ( !($current_user instanceof WP_User) )
    return;
