@@ -144,10 +144,7 @@ if($_GET['self_approved']) {
                           <td>{$value['post_content']}</td>");
                           print('
                                 <td>
-                                  <div class="wpb_wrapper">
-                                     <div class="vc_btn3-container vc_btn3-center"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange"><i class="vc_btn3-icon fa fa-file-text"></i><a href="'.$value['guid'].'"> Know More</a></button></div>
-                                     <div class="vc_btn3-container vc_btn3-center"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-icon-left vc_btn3-color-turquoise"><i class="vc_btn3-icon fa fa-check-square-o"></i> Applied</button></div>
-                                  </div>
+                                  <a href="'.$value['guid'].'"> Know More</a><br/><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-icon-left vc_btn3-color-turquoise"><i class="vc_btn3-icon fa fa-check-square-o"></i> Applied</button>
                                 </td>
                           </tr>');
               }
