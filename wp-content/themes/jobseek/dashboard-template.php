@@ -63,17 +63,14 @@ if(empty($nojob)) {
 
 if($_GET['self_approved']) {
   $empid = $_GET['empid'];
-
   $phone_number_to_send = $mydata['phone_no'][0];
-
   $company_name = $chosen_emp[$empid]['empmeta']['company_name'][0];
-
   $contact_person = $chosen_emp[$empid]['empmeta']['phone-no'][0];
 
-  // Send the message
-  $destination_number = $mydata['phone_no'][0];
+          // Send the message
+          $destination_number = $mydata['phone_no'][0];
 
-				             // We got the phone number. send message.
+           // We got the phone number. send message.
           $apiKey = "fIGPfvyRREQ-Gz6JNj76pHVpPH255wO7tMVO7jCGRq";
 
           // Config variables. Consult http://api.textlocal.in/docs for more info.
@@ -90,7 +87,7 @@ if($_GET['self_approved']) {
 
           $message = urlencode($message);
 
-          $data = "apiKey=".$apiKey."&&message=".$message."&sender=".$sender."&numbers=".$numbers."&test=".$test;
+          $data = "apiKey=".$apiKey."&message=".$message."&sender=".$sender."&numbers=".$numbers."&test=".$test;
 
           $ch = curl_init('http://api.textlocal.in/send/?');
 
@@ -126,39 +123,36 @@ if($_GET['self_approved']) {
 }
 
               if($myjoblist){
-
+              print('<div class="container">
+                <div class="table-responsive">
+                    <table class="job-manager-jobs table table-striped">
+                      <thead>
+                      <tr>
+                        <th class="job_title">#</th>
+                        <th class="date">Job Title</th>
+                        <th class="date">Description</th>
+                        <th class="date">Action</th>
+                      </tr>
+                      </thead>
+                      <tbody>');
+                      $i=0;
               foreach ($myjoblist as $key => $value) {
-                 echo '<div class="container">
-                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                    <!--<div class="wpb_column vc_column_container vc_col-sm-3">
-                       <div class="wpb_wrapper">
-                          <div class="wpb_single_image wpb_content_element vc_align_right">
-                             <figure class="wpb_wrapper vc_figure">
-                                <div class="vc_single_image-wrapper vc_box_border_grey"><img width="150" height="150" src="" class="vc_single_image-img attachment-thumbnail" alt="Company-Logo"></div>
-                             </figure>
-                          </div>
-                       </div>
-                    </div>-->
-                    <div class="wpb_column vc_column_container vc_col-sm-8">
-                       <div class="wpb_wrapper">
-                          <h2 class="subtitle">'.$value['post_title'].'</h2>
-                          <div class="wpb_text_column wpb_content_element ">
-                             <div class="wpb_wrapper">
-                                <p>'.$value['post_content'].'</p>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-4">
-                       <div class="wpb_wrapper">
-                          <div class="vc_btn3-container vc_btn3-center"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange"><i class="vc_btn3-icon fa fa-file-text"></i><a href="'.$value['guid'].'"> Know More</a></button></div>
-                          <div class="vc_btn3-container vc_btn3-center"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-icon-left vc_btn3-color-turquoise"><i class="vc_btn3-icon fa fa-check-square-o"></i> Applied</button></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_turquoise"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span></div>';
+                $i++;
+                print("<tr>
+                          <td>{$i}</td>
+                          <td>{$value['post_title']}</td>
+                          <td>{$value['post_content']}</td>");
+                          print('
+                                <td>
+                                  <div class="wpb_wrapper">
+                                     <div class="vc_btn3-container vc_btn3-center"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange"><i class="vc_btn3-icon fa fa-file-text"></i><a href="'.$value['guid'].'"> Know More</a></button></div>
+                                     <div class="vc_btn3-container vc_btn3-center"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-icon-left vc_btn3-color-turquoise"><i class="vc_btn3-icon fa fa-check-square-o"></i> Applied</button></div>
+                                  </div>
+                                </td>
+                          </tr>');
               }
-
+              print("</tbody>
+              </table>");
           }else{
             echo '<h2>You have not applied for any jobs.</h2>';
 
