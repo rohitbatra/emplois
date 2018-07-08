@@ -22,7 +22,7 @@ include("database.php");
 
 $user_ID = get_current_user_id();
 
-
+var_dump($user_ID);die();
 
 $current_user = wp_get_current_user();
 
@@ -456,7 +456,7 @@ echo '
 
       <div class="vc_row wpb_row vc_row-fluid color-default">
 
-         
+
 
          <div class="border_bottom wpb_column vc_column_container vc_col-sm-12">
 
