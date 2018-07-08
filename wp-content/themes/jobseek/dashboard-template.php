@@ -62,10 +62,10 @@ if(empty($nojob)) {
 }
 
 if($_GET['self_approved']) {
-  $empid = $_GET['empid'];
-  $phone_number_to_send = $mydata['phone_no'][0];
-  $company_name = $chosen_emp[$empid]['empmeta']['company_name'][0];
-  $contact_person = $chosen_emp[$empid]['empmeta']['phone-no'][0];
+          $empid = $_GET['empid'];
+          $phone_number_to_send = $mydata['phone_no'][0];
+          $company_name = $chosen_emp[$empid]['empmeta']['company_name'][0];
+          $contact_person = $chosen_emp[$empid]['empmeta']['phone-no'][0];
 
           // Send the message
           $destination_number = $mydata['phone_no'][0];
@@ -74,11 +74,9 @@ if($_GET['self_approved']) {
           $apiKey = "fIGPfvyRREQ-Gz6JNj76pHVpPH255wO7tMVO7jCGRq";
 
           // Config variables. Consult http://api.textlocal.in/docs for more info.
-
           $test = "0";
 
           // Data for text message. This is the text message data.
-
           $sender = "SEZPLS"; // This is who the message appears to be from.
 
           $numbers = "91".$destination_number; // A single number or a comma-seperated list of numbers
@@ -105,23 +103,8 @@ if($_GET['self_approved']) {
 
           $result = mysqli_query($conn, $qur);
 
-      echo '<div style="background-color: #469A2A;
-
-        padding: 8px;
-
-        text-align: center;
-
-        margin-bottom: 20px;
-
-        font-size: 22px;
-
-        border-radius: 8px;
-
-        color: white;
-
-        width: 50%;">Approved, Message has been sent.</div>';
+      echo '<div style="background-color: #469A2A;padding: 8px;text-align: center;margin-bottom: 20px;font-size: 22px;border-radius: 8px;color: white;width: 50%;">Approved, Message has been sent.</div>';
 }
-
               if($myjoblist){
               print('<div class="container">
                 <div class="table-responsive">
