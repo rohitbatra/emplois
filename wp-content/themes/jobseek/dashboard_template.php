@@ -1,12 +1,8 @@
-<?php 
-
+<?php
 /* Template name: Dashboard Template */
-
-
 get_header();
-
 $user_ID = get_current_user_id();
-
+var_dump($user_ID);die();
 $current_user = wp_get_current_user();
 if ( !($current_user instanceof WP_User) )
    return;
@@ -32,13 +28,13 @@ if( $page_title != 'hide' ) {
 	<div class="container">
     <?php //print_r($roles);?>
     <!-- || $roles['0'] == 'administrator' -->
-<?php if($user_ID != 0 && $roles['0'] == 'employer' ) { echo do_shortcode('[job_dashboard]'); } ?> 
+<?php if($user_ID != 0 && $roles['0'] == 'employer' ) { echo do_shortcode('[job_dashboard]'); } ?>
 <?php if($user_ID != 0 && $roles['0'] == 'subscriber' ) { ?>
-    
+
     <div id="job-manager-job-dashboard">
-    
+
     <p>Your Job Applied listings are shown in the table below.</p>
-    
+
         <div class="table-responsive">
             <table class="job-manager-jobs table table-striped">
             <thead>
@@ -51,41 +47,41 @@ if( $page_title != 'hide' ) {
             </tr>
             </thead>
             <tbody>
-            
-            <?php 
+
+            <?php
 				include("database.php");
-			
+
 				$get_job	=	"SELECT * FROM applied_job_details WHERE user_ID = '$user_ID'";
 				$result 	= 	mysqli_query($conn, $get_job);
 				if ($result->num_rows > 0) {
 				$i=1;
-				while($row = $result->fetch_assoc()) 
-					{		
+				while($row = $result->fetch_assoc())
+					{
 						$j_id			=	$row['job_ID'];
 						$app_date		=	date_create($row['applied_date']);
 				?>
-                <tr>              
+                <tr>
                     <td><?php echo $i; ?></td>
                     <td> <a target="_blank" href="<?php echo esc_url( get_permalink($j_id) ); ?>"><?php echo get_the_title($j_id); ?></a></td>
                     <td><?php echo  get_the_date( $format, $j_id ) ; ?></td>
                     <td><?php echo date_format($app_date,"F j, Y"); ?></td>
                     <td><strong><?php echo "Applied" ?></strong></td>
                 </tr>
-                  
+
 	<?php
                         $i++;
 					}
 				}
 	?>
-              
+
             </tbody>
             </table>
-        
+
         </div>
 
     </div>
 
-<?php } else {}?> 
+<?php } else {}?>
 
 		<?php if ( have_posts() ) :
 
@@ -106,7 +102,7 @@ if( $page_title != 'hide' ) {
 					comments_template();
 				}
 
-			endwhile; 
+			endwhile;
 
 		else :
 
