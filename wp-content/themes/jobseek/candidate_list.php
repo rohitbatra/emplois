@@ -195,7 +195,7 @@ if($noApplicants === false) {
                 <td><i class='fa fa-location-arrow'></i> {$value['postmeta']['_candidate_location'][0]}</td>
                 ";
         if($value['candidature_status'] !== '0') {
-            echo '<td><button onclick="printpage('.$value['postdata']['post_author'].')" class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-mulled-wine"><i class="vc_btn3-icon fa fa-download"></i> Download Resume</button></td>';
+            echo '<td><button onclick="printpage('.$value['postdata']['post_author'].')" class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-green"><i class="vc_btn3-icon fa fa-download"></i> Download Resume</button></td>';
         }else{
             $path = pathinfo($_SERVER['REQUEST_URI']);
             echo '<td><a href="//sezplus.com/jobs/applied-candidate-list?jobID='.$value['job_id'].'&userID='.$key.'&approve=1&sendcall=1"><button class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-mulled-wine"><i class="vc_btn3-icon fa fa-envelope"></i> Send A Call Letter</button></a></td>';
