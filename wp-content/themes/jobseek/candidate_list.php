@@ -96,12 +96,7 @@ if($_GET['sendcall']) {
             //-----------------------------------------
             // Send Call Letter Functionality
             //-----------------------------------------
-            /*
-            var_dump($applicantmeta);
-            $jobmeta = get_post_meta($jobID);
-            var_dump($jobmeta);
-            die();
-            */
+
             if(strlen($applicantmeta[$sendcall_id]['meta']['phone_no'][0]) == 0)
             {
                 $candidate_phone_number = '9768230192';
@@ -136,14 +131,18 @@ if($_GET['sendcall']) {
                 if(strlen($jobmeta['_contact_person'][0]) == 0 || strlen($jobmeta['_contact_num'][0]) == 0){
 
                     // SQL to Find company contact Info
-                    $cmpMeta  =  "SELECT * FROM wp_usermeta WHERE user_id = ".$userId." ";
+                    $cmpMeta  =  "SELECT wp_um.meta_key, wp_um.meta_value FROM wp_usermeta AS wp_um WHERE wp_um.user_id = (SELECT post_author FROM wp_posts WHERE post_id = '{$jobId}')";
 
                     $result = mysqli_query($conn, $cmpMeta);
 
-                        while($row = $result->fetch_assoc()) {
-                            $contactPerson = substr($row['_contact_person'],0,20);
-                            $contactNumber = substr($row['_contact_num'],0,17);
+                    while($row = $result->fetch_assoc()) {
+
+                        if($row['meta_key'] == '_contact_person'){
+                            $contactPerson = substr($row['meta_value'],0,20);
+                        }elseif ($row['meta_key'] == '_contact_num'){
+                            $contactNumber = substr($row['meta_value'],0,17);
                         }
+                    }
 
                 }else{
                     $contactPerson = substr($jobmeta['_contact_person'][0],0,20);
