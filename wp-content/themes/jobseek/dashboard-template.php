@@ -207,9 +207,9 @@ echo '
             foreach ($final_post as $key => $value) {
                 $i++;
             echo '<tr>
-                    <td>{$i}</td>
+                    <td>'.$i.'</td>
                     <td>'.$value['title'].'</td>
-                    <td>'.substr($value['description'],0,200).'</td>
+                    <td>'.substr($value['description'],0,150).'</td>
                     <td><a href="javascript:void(1);" style="font-size: 25px;">'.$value['count'].' <i class="vc_btn3-icon fa fa-users"></i></a><br>Number Of Candidate Applied</td>                    
                   ';
 
