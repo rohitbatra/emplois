@@ -7,7 +7,7 @@ global $resume_preview;
 include("database.php");
 $jobID = $_GET['jobID'];
 
-$posts =  "SELECT * FROM applied_job_details WHERE job_ID = ".$jobID;
+$posts =  "SELECT * FROM applied_job_details WHERE job_ID = '{$jobID}'";
 $result = mysqli_query($conn, $posts);
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
 } else {
    $noapplicants = 1;
 }
-
+var_dump($noapplicants);die();
 if(!$noapplicants) {
 
 	$applicantsidkeys = array_keys($applicantsid);
