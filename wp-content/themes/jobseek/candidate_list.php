@@ -153,9 +153,6 @@ if($_GET['sendcall']) {
 
                 $message = "Hello ".substr($candidate_name,0,13).", you are selected for interview at ".substr($jobmeta['_company_name'][0],0,23).". Please Contact: ".$contactPerson.", Phone: ".$contactNumber." - SEZPLUS Team";
 
-                var_dump($message);
-                die();
-
    // 612 chars or less
                 // A single number or a comma-seperated list of numbers
 
@@ -174,7 +171,6 @@ if($_GET['sendcall']) {
                 $result = curl_exec($ch); // This is the result from the API
 
                 var_dump($result);
-                die();
 
                 curl_close($ch);
 
