@@ -210,11 +210,11 @@ echo '
                     <td>'.$i.'</td>
                     <td>'.$value['title'].'</td>
                     <td>'.substr($value['description'],0,150).'</td>
-                    <td><a href="javascript:void(1);" style="font-size: 25px;">'.$value['count'].' <i class="vc_btn3-icon fa fa-users"></i></a><br>Number Of Candidate Applied</td>                    
+                    <td><a href="javascript:void(1);" style="font-size: 25px;">'.$value['count'].' <i class="vc_btn3-icon fa fa-users"></i></a></td>                    
                   ';
 
                      if($value['count'] >= 1){
-                        echo '<td><a href="//sezplus.com/jobs/applied-candidate-list/?jobID='.$value['id'].'"><button style="text-align: center;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange"><i class="vc_btn3-icon fa fa-users"></i> View Candidates</button></a></td>';
+                        echo '<td><a href="//sezplus.com/jobs/applied-candidate-list/?jobID='.$value['id'].'"><button class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange"><i class="vc_btn3-icon fa fa-users"></i> View Candidates</button></a></td>';
                       }else{
                          echo '<td></td>';
                      }
