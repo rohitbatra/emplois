@@ -13,11 +13,18 @@ $mydata = get_user_meta($user_ID);
 echo '
     <section id="title">
       <div class="container">
-        <h1>Dashboard</h1>
-        <br />
-        <h3>'.$mydata['first_name'][0].' '.$mydata['last_name'][0].'</h3>
+        <h1>Dashboard</h1>';
+
+if($user_ID != 0) {
+    if($roles['0'] == 'subscriber') {
+        echo ' <br />
+        <h3>' . $mydata['first_name'][0] . ' ' . $mydata['last_name'][0] . '</h3>';
+    }
+}
+echo '
       </div>
   </section>';
+
 if($user_ID != 0) {
   if( $roles['0'] == 'subscriber' || $roles['0'] == 'administrator' ) {
    $posts  =  "SELECT * from applied_job_details where user_ID = ".$user_ID;
