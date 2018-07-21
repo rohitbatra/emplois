@@ -5,8 +5,6 @@
 get_header();
 global $resume_preview;
 include("database.php");
-$flg = false;
-ReRender:
 $jobID = $_GET['jobID'];
 
 $posts =  "SELECT * FROM applied_job_details WHERE job_ID = ".$jobID;
@@ -75,7 +73,7 @@ if($_GET['sendcall']) {
 
         $jobId = $_GET['jobID'];
 
-        $posts  =  "SELECT approved_by_company FROM applied_job_details WHERE job_ID = ".$jobId." AND user_ID = ".$userId." ";
+        $posts  =  "SELECT approved_by_company FROM applied_job_details WHERE job_ID = '{$jobId}' AND user_ID = '{$userId}'";
 
         $result = mysqli_query($conn, $posts);
 
@@ -166,11 +164,13 @@ if($_GET['sendcall']) {
 
                 curl_close($ch);
 
-                $flg = true;
-
                 //-------------------------------------------------------
             }
-            goto ReRender;
+            // Redirect to the Applied List Page
+            echo '
+                <script type="text/javascript">
+                    window.location = "//sezplus.com/jobs/applied-candidate-list/?jobID='.$jobId.'&userID='.$userId.'";
+                </script>';
         }
     }
 }
