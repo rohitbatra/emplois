@@ -130,9 +130,29 @@ if($_GET['sendcall']) {
                 // Data for text message. This is the text message data.
                 $sender = "SEZPLS"; // This is who the message appears to be from.
                 $numbers = "91".$candidate_phone_number; // A single number or a comma-seperated list of numbers
-                $message = "Hello ".substr($candidate_name,0,13).", you are selected for interview at ".substr($jobmeta['_company_name'][0],0,23).". Please Contact: ".substr($jobmeta['_contact_person'][0],0,20).", Phone: ".substr($jobmeta['_contact_num'][0],0,17)." - SEZPLUS Team";
 
-                var_dump($message);die();
+                // TODO:
+                // Check for the Company Details too
+                if(strlen($jobmeta['_contact_person'][0]) == 0 || strlen($jobmeta['_contact_num'][0]) == 0){
+
+                    // SQL to Find company contact Info
+                    $cmpMeta  =  "SELECT * FROM wp_usermeta WHERE user_id = ".$userId." ";
+
+                    $result = mysqli_query($conn, $cmpMeta);
+
+                        while($row = $result->fetch_assoc()) {
+                            $contactPerson = substr($row['_contact_person'],0,20);
+                            $contactNumber = substr($row['_contact_num'],0,17);
+                        }
+
+                }else{
+                    $contactPerson = substr($jobmeta['_contact_person'][0],0,20);
+                    $contactNumber = substr($jobmeta['_contact_num'][0],0,17);
+                }
+
+
+                $message = "Hello ".substr($candidate_name,0,13).", you are selected for interview at ".substr($jobmeta['_company_name'][0],0,23).". Please Contact: ".$contactPerson.", Phone: ".$contactNumber." - SEZPLUS Team";
+
 	               // 612 chars or less
 
                 // A single number or a comma-seperated list of numbers
