@@ -17,8 +17,8 @@ echo '
 
 if($user_ID != 0) {
     if($roles['0'] == 'subscriber') {
-        echo ' <br />
-        <h3>' . $mydata['first_name'][0] . ' ' . $mydata['last_name'][0] . '</h3>';
+        echo '
+        <h4>' . $mydata['first_name'][0] . ' ' . $mydata['last_name'][0] . '</h4><br/>';
     }
 }
 echo '
