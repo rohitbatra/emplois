@@ -139,37 +139,39 @@ if($noApplicants === false) {
                     //-------------------------------------------------------
                 }
             }
+        }
+    }
 
-            $applicantsIdArrKeys = array_keys($applicantIdArr);
+    $applicantsIdArrKeys = array_keys($applicantIdArr);
 
-            foreach ($applicantsIdArrKeys as $key => $value) {
+    foreach ($applicantsIdArrKeys as $key => $value) {
 
-                // QUERY TO FETCH THE USER POST
-                $userSql  =  "SELECT ID FROM wp_posts WHERE post_author = '{$value}' LIMIT 1";
-                $result = mysqli_query($conn, $userSql);
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        $applicantId = $row['ID'];
-                    }
-                }
-                // Get the Post meta
-                $applicantMetaArr[$value]['postdata'] = get_post($applicantId, ARRAY_A);
-                $applicantMetaArr[$value]['postmeta'] = get_post_meta($applicantId);
-                $applicantMetaArr[$value]['userdata'] = get_userdata($value);
-                $applicantMetaArr[$value]['meta'] = get_user_meta($value);
-                $applicantMetaArr[$value]['job_id'] = $jobID;
-
-                $posts  =  "SELECT approved_by_company FROM applied_job_details WHERE job_ID = '{$jobID}' AND user_ID = '{$value}' ";
-
-                $result = mysqli_query($conn, $posts);
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        $applicantMetaArr[$value]['candidature_status'] = $row['approved_by_company'];
-                    }
-                }
+        // QUERY TO FETCH THE USER POST
+        $userSql  =  "SELECT ID FROM wp_posts WHERE post_author = '{$value}' LIMIT 1";
+        $result = mysqli_query($conn, $userSql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $applicantId = $row['ID'];
             }
+        }
+        // Get the Post meta
+        $applicantMetaArr[$value]['postdata'] = get_post($applicantId, ARRAY_A);
+        $applicantMetaArr[$value]['postmeta'] = get_post_meta($applicantId);
+        $applicantMetaArr[$value]['userdata'] = get_userdata($value);
+        $applicantMetaArr[$value]['meta'] = get_user_meta($value);
+        $applicantMetaArr[$value]['job_id'] = $jobID;
 
-            echo '<section id="content">
+        $posts  =  "SELECT approved_by_company FROM applied_job_details WHERE job_ID = '{$jobID}' AND user_ID = '{$value}' ";
+
+        $result = mysqli_query($conn, $posts);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $applicantMetaArr[$value]['candidature_status'] = $row['approved_by_company'];
+            }
+        }
+    }
+
+    echo '<section id="content">
                    <div class="container">
                      <div class="table-responsive">
                          <table class="job-manager-jobs table table-striped">
@@ -183,32 +185,30 @@ if($noApplicants === false) {
                            </thead>
                            <tbody>
                          ';
-            $i=0;
-            foreach ($applicantMetaArr as $key => $value) {
-                $i++;
-                echo "
+    $i=0;
+    foreach ($applicantMetaArr as $key => $value) {
+        $i++;
+        echo "
               <tr>
                 <td>{$i}</td>
                 <td><a href='{$value['postdata']['guid']}?referrer=c_list' target='_blank'>{$value['postmeta']['_candidate_name'][0]}</a></td>
                 <td><i class='fa fa-location-arrow'></i> {$value['postmeta']['_candidate_location'][0]}</td>
                 ";
-                if($value['candidature_status'] !== '0') {
-                    echo '<td><button onclick="printpage('.$value['postdata']['post_author'].')" class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-mulled-wine"><i class="vc_btn3-icon fa fa-download"></i> Download Resume</button></td>';
-                }else{
-                    $path = pathinfo($_SERVER['REQUEST_URI']);
-                    echo '<td><a href="//sezplus.com/jobs/applied-candidate-list?jobID='.$value['job_id'].'&userID='.$key.'&approve=1&sendcall=1"><button class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-mulled-wine"><i class="vc_btn3-icon fa fa-envelope"></i> Send A Call Letter</button></a></td>';
-                }
-                echo " </tr>";
+        if($value['candidature_status'] !== '0') {
+            echo '<td><button onclick="printpage('.$value['postdata']['post_author'].')" class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-mulled-wine"><i class="vc_btn3-icon fa fa-download"></i> Download Resume</button></td>';
+        }else{
+            $path = pathinfo($_SERVER['REQUEST_URI']);
+            echo '<td><a href="//sezplus.com/jobs/applied-candidate-list?jobID='.$value['job_id'].'&userID='.$key.'&approve=1&sendcall=1"><button class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-mulled-wine"><i class="vc_btn3-icon fa fa-envelope"></i> Send A Call Letter</button></a></td>';
+        }
+        echo " </tr>";
 
 
-            }
-            echo '        </tbody>
+    }
+    echo '        </tbody>
                 </table>
               </div>
             </div>
           </section>';
-        }
-    }
 
 }else{
     echo '<h4> No Applicant(s) Yet!</h5><br/>';
