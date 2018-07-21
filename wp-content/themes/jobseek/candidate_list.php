@@ -108,11 +108,12 @@ if($_GET['sendcall']) {
                 $candidate_phone_number = $applicantmeta[$sendcall_id]['meta']['phone_no'][0];
             }
             $candidate_name  =  $applicantmeta[$sendcall_id]['meta']['first_name'][0] ." ". $applicantmeta[$sendcall_id]['meta']['last_name'][0];
+
             if(!$candidate_phone_number)
             {
                 echo "<p class='error center'>Phone Number is not available for {$jobmeta['_candidate_name'][0]}.</p>";
             }else{
-
+                echo 'In Here';
                 // We got the phone number. send message.
                 // Get the job meta first, we need contact person details.
 
@@ -131,7 +132,7 @@ if($_GET['sendcall']) {
                 if(strlen($jobmeta['_contact_person'][0]) == 0 || strlen($jobmeta['_contact_num'][0]) == 0){
 
                     // SQL to Find company contact Info
-                    $cmpMeta  =  "SELECT wp_um.meta_key, wp_um.meta_value FROM wp_usermeta AS wp_um WHERE wp_um.user_id = (SELECT post_author FROM wp_posts WHERE post_id = '{$jobId}')";
+                    $cmpMeta  =  "SELECT wp_um.meta_key, wp_um.meta_value FROM wp_usermeta AS wp_um WHERE wp_um.user_id = (SELECT post_author FROM wp_posts WHERE ID = '{$jobId}')";
 
                     $result = mysqli_query($conn, $cmpMeta);
 
