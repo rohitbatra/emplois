@@ -23,7 +23,7 @@ if( $page_title != 'hide' )
 
 	<section id="title">
 		<div class="container">
-			<h1><?php the_title(); ?></h1>
+			<h2><?php the_title(); ?></h2>
 			<?php if( !empty( $page_subtitle ) ) { ?><h4><?php echo esc_html($page_subtitle); ?></h4><?php } ?>
 		</div>
 	</section>
