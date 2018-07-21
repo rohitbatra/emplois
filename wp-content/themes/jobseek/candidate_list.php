@@ -89,14 +89,17 @@ if($_GET['sendcall']) {
 
         if($apr !== '1') {
 
-            $posts  =  "UPDATE applied_job_details SET approved_by_company = '1' WHERE job_ID = ".$jobId." AND user_ID = ".$userId.";";
+            //$posts  =  "UPDATE applied_job_details SET approved_by_company = '1' WHERE job_ID = ".$jobId." AND user_ID = ".$userId.";";
 
-            $result = mysqli_query($conn, $posts);
+            //$result = mysqli_query($conn, $posts);
 
             //-----------------------------------------
             // Send Call Letter Functionality
             //-----------------------------------------
-
+            var_dump($applicantmeta);
+            $jobmeta = get_post_meta($jobID);
+            var_dump($jobmeta);
+            die();
             if(strlen($applicantmeta[$sendcall_id]['meta']['phone_no'][0]) == 0)
             {
                 $candidate_phone_number = '9768230192';
