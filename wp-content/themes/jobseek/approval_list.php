@@ -15,9 +15,9 @@ if( $page_title != 'hide' )
 	$page_subtitle = get_post_meta( get_the_ID(), '_jobseek_page_title_subtitle', true ); ?>
 	<section id="title">
 		<div class="container">
-			<h1><?php the_title(); ?></h1>
+			<h2><?php the_title(); ?></h2>
 			<?php if( !empty( $page_subtitle ) ) { ?><h4><?php echo esc_html($page_subtitle); ?></h4><?php } ?>
-		<h3><?php print($mydata['first_name'][0].' '.$mydata['last_name'][0]); ?></h3>
+		    <h4><?php print($mydata['first_name'][0].' '.$mydata['last_name'][0]); ?></h4>
 		</div>
 	</section>
 <?php }
@@ -103,7 +103,8 @@ $applicantmeta = get_user_meta($user_ID);
                 if(strtolower($roles['0']) == 'subscriber' || strtolower($roles['0']) == 'candidate')
                 {
                    $path = pathinfo($_SERVER['REQUEST_URI']);
-                   print('<table class="job-manager-jobs table table-striped">
+                   print('<div class="table-responsive">
+                            <table class="job-manager-jobs table table-striped">
                             <thead>
                             <tr>
                               <th class="job_title">#</th>
@@ -135,8 +136,10 @@ $applicantmeta = get_user_meta($user_ID);
                      }
 
                      print("</tbody>
-                     </table>");
+                     </table>
+                     </div>");
                 }
+
                 if(!empty($currResult))
                 {
 
@@ -148,7 +151,7 @@ $applicantmeta = get_user_meta($user_ID);
 
                             if($currResult['id'] === $_GET['id'])
                             {
-			      $currResult['metadata'] = get_user_meta($currResult['emp_id']);
+			                    $currResult['metadata'] = get_user_meta($currResult['emp_id']);
 
                             // Text Message Send to Candidate with Company Details ------------------------------------
 
@@ -237,5 +240,5 @@ $applicantmeta = get_user_meta($user_ID);
                     }
 
                 }
-
-                get_footer(); ?>
+                echo '</div></section>';
+                get_footer();
