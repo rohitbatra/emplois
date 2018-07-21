@@ -51,6 +51,13 @@ if(!$noapplicants) {
 	}
 }
 
+echo '
+    <section id="title">
+        <div class="container">
+            <h2>Applied Candidate List</h2>
+        </div>
+    </section>';
+
 
 echo '
 <script type="text/javascript">
@@ -183,58 +190,6 @@ if($applicantmeta){
                 }
             echo " </tr>";
 
-/*
-echo '
-                    <div class="vc_row wpb_row vc_row-fluid color-default">
-                       <div class="wpb_column vc_column_container vc_col-sm-3">
-                          <div class="wpb_wrapper">
-                             <div class="wpb_single_image wpb_content_element vc_align_left">
-                                <figure class="wpb_wrapper vc_figure">
-                                   <div class="vc_single_image-wrapper vc_box_outline_circle  vc_box_border_turquoise" style="max-height:180px;padding:0px !important;"><img class="candidate_photo" src="'.$value['postmeta']['_candidate_photo'][0].'" /></div>
-                                </figure>
-                             </div>
-                          </div>
-                       </div>
-                       <div class="wpb_column vc_column_container vc_col-sm-6">
-                          <div class="wpb_wrapper">
-                             <div class="wpb_text_column wpb_content_element  vc_custom_1459163352664">
-                                <div class="wpb_wrapper">
-                                   <h3><a href="'.$value['postdata']['guid'].'?referrer=c_list" target="_blank">'.$value['postmeta']['_candidate_name'][0].'</a></h3> <br />
-		                               <p> Skills:  </p>
-                                   <p>'.substr($value['postmeta']['_resume_content'][0],0,$pos).'...</p>
-                                </div>
-                             </div>
-                          </div>
-                       </div>
-                       <div class="wpb_column vc_column_container vc_col-sm-3">
-                          <div class="wpb_wrapper">
-                             <div class="wpb_text_column wpb_content_element ">
-                                <div class="wpb_wrapper">
-                                   <p style="text-align: center;"><i class="fa fa-location-arrow"></i> '.$value['postmeta']['_candidate_location'][0].'</p>
-                                </div>
-                             </div>
-                             <div class="vc_btn3-container  wpb_animate_when_almost_visible wpb_bottom-to-top vc_btn3-center"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange"><i class="vc_btn3-icon fa fa-newspaper-o"></i> View Resume</button></div>';
-                        if($value['candidature_status'] !== '0') {
-                            echo '<div class="vc_btn3-container vc_btn3-center"><button onclick="printpage('.$value['postdata']['post_author'].')" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-mulled-wine"><i class="vc_btn3-icon fa fa-download"></i> Download Resume</button></div>';
-                        }else{
-                            $path = pathinfo($_SERVER['REQUEST_URI']);
-                            //echo '<div class="vc_btn3-container vc_btn3-center"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-mulled-wine"><i class="vc_btn3-icon fa fa-envelope"></i> <a href="">Send A Call Letter</a></button></div>';
-                            echo '<div class="vc_btn3-container vc_btn3-center"> <a href="//sezplus.com/jobs/applied-candidate-list?jobID='.$value['job_id'].'&userID='.$key.'&approve=1&sendcall=1"> <button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-mulled-wine"><i class="vc_btn3-icon fa fa-envelope"></i> Send A Call Letter</button></a></div>';
-                        }
-
-                         echo '
-                          </div>
-                       </div>
-                    </div>
-                    <div class="vc_row wpb_row vc_row-fluid color-default">
-                       <div class="wpb_column vc_column_container vc_col-sm-12">
-                          <div class="wpb_wrapper">
-                             <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_turquoise"><span class="vc_sep_holder vc_sep_holder_l"><span  class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span  class="vc_sep_line"></span></span></div>
-                          </div>
-                       </div>
-                    </div>
-                  </div>';
-*/
 
 	}
     echo '</tbody>
