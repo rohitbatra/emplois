@@ -13,7 +13,7 @@ $mydata = get_user_meta($user_ID);
 echo '
     <section id="title">
       <div class="container">
-        <h1>Dashboard</h1>';
+        <h2>Dashboard</h2>';
 
 if($user_ID != 0) {
     if($roles['0'] == 'subscriber') {
@@ -141,7 +141,7 @@ if($_GET['self_approved']) {
               print("</tbody>
               </table>");
           }else{
-            echo '<h2>You have not applied for any jobs.</h2>';
+            echo '<h2>You have not applied for any jobs yet!</h2>';
 
           }
             echo '</div>
@@ -200,15 +200,17 @@ echo '
                      </div>
                      <div class="wpb_column vc_column_container vc_col-sm-3">
                         <div class="wpb_wrapper">
-                           <h5 style="color:#888;">Job / role description </h5>
+                           <h5 style="color:#888;">Job Description </h5>
                         </div>
                      </div>
                      <div class="wpb_column vc_column_container vc_col-sm-3">
                         <div class="wpb_wrapper">
+                        <h5 style="color:#888;">No. Of Applicants</h5>
                         </div>
                      </div>
                      <div class="wpb_column vc_column_container vc_col-sm-3">
                         <div class="wpb_wrapper">
+                        <h5 style="color:#888;">Action</h5>
                         </div>
                      </div>
                   </div>';
