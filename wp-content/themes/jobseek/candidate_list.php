@@ -170,7 +170,9 @@ if($_GET['sendcall']) {
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
                 $result = curl_exec($ch); // This is the result from the API
+
                 var_dump($result);die();
+
                 curl_close($ch);
 
                 //-------------------------------------------------------
