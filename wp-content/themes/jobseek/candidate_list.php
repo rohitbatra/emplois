@@ -96,10 +96,12 @@ if($_GET['sendcall']) {
             //-----------------------------------------
             // Send Call Letter Functionality
             //-----------------------------------------
+            /*
             var_dump($applicantmeta);
             $jobmeta = get_post_meta($jobID);
             var_dump($jobmeta);
             die();
+            */
             if(strlen($applicantmeta[$sendcall_id]['meta']['phone_no'][0]) == 0)
             {
                 $candidate_phone_number = '9768230192';
@@ -130,6 +132,7 @@ if($_GET['sendcall']) {
                 $numbers = "91".$candidate_phone_number; // A single number or a comma-seperated list of numbers
                 $message = "Hello ".substr($candidate_name,0,13).", you are selected for interview at ".substr($jobmeta['_company_name'][0],0,23).". Please Contact: ".substr($jobmeta['_contact_person'][0],0,20).", Phone: ".substr($jobmeta['_contact_num'][0],0,17)." - SEZPLUS Team";
 
+                var_dump($message);die();
 	               // 612 chars or less
 
                 // A single number or a comma-seperated list of numbers
@@ -147,6 +150,7 @@ if($_GET['sendcall']) {
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
                 $result = curl_exec($ch); // This is the result from the API
+                var_dump($result);die();
                 curl_close($ch);
 
                 //-------------------------------------------------------
