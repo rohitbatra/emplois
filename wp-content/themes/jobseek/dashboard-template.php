@@ -189,81 +189,37 @@ $conn->close();
 echo '
 <section id="content">
    <div class="container">
-      <div class="vc_row wpb_row vc_row-fluid color-default">
-         <div class="border_bottom wpb_column vc_column_container vc_col-sm-12">
-               <div class="wpb_wrapper">
-                <div class="vc_row wpb_row vc_inner vc_row-fluid" style="margin-bottom: 4px;border-bottom: 1px solid #888;">
-                     <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="wpb_wrapper">
-                           <h5 style="color:#888;">Job Title</h5>
-                        </div>
-                     </div>
-                     <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="wpb_wrapper">
-                           <h5 style="color:#888;">Job Description </h5>
-                        </div>
-                     </div>
-                     <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="wpb_wrapper">
-                        <h5 style="color:#888;">No. Of Applicants</h5>
-                        </div>
-                     </div>
-                     <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="wpb_wrapper">
-                        <h5 style="color:#888;">Action</h5>
-                        </div>
-                     </div>
-                  </div>';
+        <div class="table-responsive">
+            <table class="job-manager-jobs table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Job Title</th>
+                        <th>Job Description</th>
+                        <th>No. Of Applicants</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ';
          if(!$nojob){
             foreach ($final_post as $key => $value) {
-            echo '
-                  <div class="vc_row wpb_row vc_inner vc_row-fluid" style="margin-top: 31px;">
-                     <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="wpb_wrapper">
-                           <h5 style="color:#888;">'.$value['title'].'</h5>
-                        </div>
-                     </div>
-                     <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="wpb_wrapper">
-                           <div class="wpb_text_column wpb_content_element  vc_custom_1459159604384">
-                              <div class="wpb_wrapper">
-                                 <p>'.substr($value['description'],0,200).'</p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="wpb_wrapper">
-                           <div class="wpb_text_column wpb_content_element ">
-                              <div class="wpb_wrapper">
-                                 <p style="text-align: center;"><a style="font-size: 25px;">'.$value['count'].' <i class="vc_btn3-icon fa fa-users"></i></a><br>
-                                    Number Of Candidate Applied
-                                 </p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>';
+            echo '<tr>
+                    <td>'.$value['title'].'</td>
+                    <td>'.substr($value['description'],0,200).'</td>
+                    <td><a href="javascript:void(1);" style="font-size: 25px;">'.$value['count'].' <i class="vc_btn3-icon fa fa-users"></i></a><br>Number Of Candidate Applied</td>                    
+                  ';
 
                      if($value['count'] >= 1){
-
-                     echo '<div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="wpb_wrapper">
-                           <div class="vc_btn3-container  wpb_animate_when_almost_visible wpb_bottom-to-top vc_btn3-center wpb_start_animation">
-                           <a href="//sezplus.com/jobs/applied-candidate-list/?jobID='.$value['id'].'"><button style="text-align: center;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange"><i class="vc_btn3-icon fa fa-users"></i> View Candidates</button></a></div>
-                        </div>
-                     </div>';
-
-                 }
-                  echo '</div>
-                          <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_shadow vc_sep_border_width_8 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
-                           </div>
-                            ';
+                        echo '<td><a href="//sezplus.com/jobs/applied-candidate-list/?jobID='.$value['id'].'"><button style="text-align: center;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-outline vc_btn3-icon-left vc_btn3-color-orange"><i class="vc_btn3-icon fa fa-users"></i> View Candidates</button></a></td>';
+                      }else{
+                         echo '<td></td>';
+                     }
+                  echo '</tr>';
             }
-
          }
-         echo '
-              </div>
-            </div>
+         echo '</tbody>
+            </table>
       </div>
    </div>
 </section>';
