@@ -1,54 +1,1 @@
-/*
-Theme Name: Jobseek Child
-Description: Child Job Board WordPress Theme
-Author: coffeecream 
-Theme URI: http://themeforest.net/user/coffeecream/portfolio
-Author URI: http://themeforest.net/user/coffeecream
-Template: jobseek
-Version: 1.0
-License: ThemeForest Regular License
-License URI: http://themeforest.net/licenses/regular
-*/
-
-@import url("../jobseek/style.css");
-
-
-
-ul.job_listings .col.job-logo {
-    width: 10%; 
-}
-
-ul.job_listings .col.job-title {
-    width: 20%;
-}
-
-.col.job-cat {
-    width: 27%;
-}
-
-ul.job_listings .col.job-location {
-    padding-left: 30px;
-    width: 15%;
-}
-
-ul.job_listings .col.job-type {
-    text-align: center;
-    width: 10%;
-}
-
-ul.job_listings .col.job-dates {
-    padding-left: 37px;
-    width: 15%;
-}
-
-form.job_filters {
-padding:0px !important;
-}
-
-.single-testimonial {
-    
-   
-   border-bottom: 0px !important; 
-     padding-bottom: 25px; 
-     border-top: 0px  !important;
-}
+/*Theme Name: Jobseek ChildDescription: Child Job Board WordPress ThemeAuthor: coffeecream Theme URI: http://themeforest.net/user/coffeecream/portfolioAuthor URI: http://themeforest.net/user/coffeecreamTemplate: jobseekVersion: 1.0License: ThemeForest Regular LicenseLicense URI: http://themeforest.net/licenses/regular*/@import url("../jobseek/style.css");ul.job_listings .col.job-logo {    width: 10%;}ul.job_listings .col.job-title {    width: 20%;}.col.job-cat {    width: 27%;}ul.job_listings .col.job-location {    padding-left: 30px;    width: 15%;}ul.job_listings .col.job-type {    text-align: center;    width: 10%;}ul.job_listings .col.job-dates {    padding-left: 37px;    width: 15%;}.single-testimonial {    border-bottom: 0px !important;    padding-bottom: 25px;    border-top: 0px !important;}.job_filters {    position: relative !important;    top: 10px !important;}.container > .wpb_row {    padding-top: 10px !important;}@media screen and (max-width: 600px) {    /* .job_filters > .search_jobs > .search_keywords,*/    .job_filters > .search_jobs > .search_location,    .job_filters > .job_types {        visibility: hidden;        clear: both;        float: left;        margin: 10px auto 5px 20px;        width: 28%;        display: none;    }    .job_filters {        width: 100% !important;    }}
